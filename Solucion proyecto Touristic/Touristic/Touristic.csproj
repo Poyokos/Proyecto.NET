@@ -44,6 +44,7 @@
     <Compile Include="ActividadCollection.cs" />
     <Compile Include="Atraccion.cs" />
     <Compile Include="Calificacion.cs" />
+    <Compile Include="Github.cs" />
     <Compile Include="Parametros.cs" />
     <Compile Include="SitioTuristico.cs" />
     <Compile Include="Turista.cs" />
