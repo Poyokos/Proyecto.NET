@@ -76,6 +76,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Actividad.aspx" />
+    <Content Include="Lugares.aspx" />
+    <Content Include="Turista.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -86,7 +88,21 @@
     <Compile Include="Actividad.aspx.designer.cs">
       <DependentUpon>Actividad.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Lugares.aspx.cs">
+      <DependentUpon>Lugares.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lugares.aspx.designer.cs">
+      <DependentUpon>Lugares.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Turista.aspx.cs">
+      <DependentUpon>Turista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Turista.aspx.designer.cs">
+      <DependentUpon>Turista.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
