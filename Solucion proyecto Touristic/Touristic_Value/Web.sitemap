@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Inicio.aspx" title="Inicio"  description="">
+    <siteMapNode url="" title="Lugares"  description="Criticas según lugares">
+      <siteMapNode url="" title="Gratis"  description="" />
+      <siteMapNode url="" title="Pagados"  description="" />
+    </siteMapNode>
+    <siteMapNode url="Actividad.aspx" title="Comentar"  description="Criticas según lugares"/>
+  </siteMapNode>
+</siteMap>
