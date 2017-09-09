@@ -8,25 +8,50 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 464px;
+            width: 121px;
+        }
+        .auto-style2 {
+            width: 152px;
+        }
+        .auto-style3 {
+            width: 133px;
+        }
+        .auto-style4 {
+            width: 66%;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <table style="width:100%;">
+    <div>
+    
+        <br />
+        <table class="auto-style4">
             <tr>
                 <td class="auto-style1">Nombre:</td>
-                <td>Rut/Pasaporte:</td>
+                <td class="auto-style2">
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                </td>
+                <td class="auto-style3">Rut / Pasaporte:</td>
+                <td>
+                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Nacionalidad:</td>
-                <td>Edad:</td>
+                <td class="auto-style2">
+                    <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                </td>
+                <td class="auto-style3">Edad:</td>
+                <td>
+                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                </td>
             </tr>
         </table>
-        <div>
-            <asp:Button ID="Button1" runat="server" Text="Button" />
-        </div>
+        <br />
+        <asp:Button ID="Button1" runat="server" Text="Agregar" />
+    
+    </div>
     </form>
 </body>
 </html>

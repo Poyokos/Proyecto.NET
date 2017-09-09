@@ -76,6 +76,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Actividad.aspx" />
+    <Content Include="Calificacion.aspx" />
+    <Content Include="Inicio.aspx" />
     <Content Include="Lugares.aspx" />
     <Content Include="Turista.aspx" />
     <Content Include="Web.config" />
@@ -87,6 +89,20 @@
     </Compile>
     <Compile Include="Actividad.aspx.designer.cs">
       <DependentUpon>Actividad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calificacion.aspx.cs">
+      <DependentUpon>Calificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calificacion.aspx.designer.cs">
+      <DependentUpon>Calificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Lugares.aspx.cs">
       <DependentUpon>Lugares.aspx</DependentUpon>
