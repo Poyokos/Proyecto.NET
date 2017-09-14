@@ -7,9 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace AplicacionASP
 {
-    public partial class Turista : System.Web.UI.Page
+    public partial class IngresoTurista : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
         {
 
         }
