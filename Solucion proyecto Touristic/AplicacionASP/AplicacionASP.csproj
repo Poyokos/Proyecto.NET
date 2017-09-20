@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Agregar.aspx" />
     <Content Include="IngresoTurista.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="Site1.Master" />
@@ -77,20 +78,20 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Actividad.aspx" />
     <Content Include="Calificacion.aspx" />
     <Content Include="Lugares.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actividad.aspx.cs">
-      <DependentUpon>Actividad.aspx</DependentUpon>
+    <Compile Include="Agregar.aspx.cs">
+      <DependentUpon>Agregar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Actividad.aspx.designer.cs">
-      <DependentUpon>Actividad.aspx</DependentUpon>
+    <Compile Include="Agregar.aspx.designer.cs">
+      <DependentUpon>Agregar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Calificacion.aspx.cs">
       <DependentUpon>Calificacion.aspx</DependentUpon>

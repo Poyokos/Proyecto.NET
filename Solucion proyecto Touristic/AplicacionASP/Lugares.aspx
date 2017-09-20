@@ -17,22 +17,38 @@
         <div>
             <table style="width:100%;">
                 <tr>
-                    <td class="auto-style1">Nombre:</td>
-                    <td>Apertura:</td>
+                    <td class="auto-style1">Nombre:&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
+                    </td>
+                    <td>Apertura:&nbsp;
+                        <asp:TextBox ID="hEntrada" runat="server" Width="28px"></asp:TextBox>
+                        :<asp:TextBox ID="mEntrada" runat="server" Width="28px"></asp:TextBox>
+                        <asp:DropDownList ID="ddApertura" runat="server">
+                        </asp:DropDownList>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="auto-style1">Direccion</td>
-                    <td>Cierre:</td>
+                    <td class="auto-style1">Direccion:&nbsp; <asp:TextBox ID="txtDireccion" runat="server"></asp:TextBox>
+                    </td>
+                    <td>Cierre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:TextBox ID="hSalida" runat="server" Width="28px"></asp:TextBox>
+                        :<asp:TextBox ID="mSalida" runat="server" Width="28px"></asp:TextBox>
+                        <asp:DropDownList ID="ddClausura" runat="server">
+                        </asp:DropDownList>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="auto-style1">Gratuito<asp:RadioButton ID="RadioButton1" runat="server" />
-                        <asp:RadioButton ID="RadioButton2" runat="server" />
+                    <td class="auto-style1">Gratuito<asp:RadioButton ID="rbSi" runat="server" Text="Si" />
+                        <asp:RadioButton ID="rbNo" runat="server" Text="No" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style1">
-                        <asp:Button ID="Button1" runat="server" Text="Button" />
+                        <asp:Button ID="btnCancelar" runat="server" OnClick="btnCancelar_Click" Text="Cancelar" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="btnAgregar" runat="server" Text="Agregar" OnClick="btnAgregar_Click" />
+                    &nbsp;
                     </td>
                     <td>&nbsp;</td>
                 </tr>

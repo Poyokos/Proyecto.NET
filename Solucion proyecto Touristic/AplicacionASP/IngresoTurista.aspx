@@ -41,9 +41,11 @@
             </tr>
             <tr>
                 <td class="auto-style5">
+                    <asp:Button ID="btnCancelar" runat="server" OnClick="btnCancelar_Click" Text="Cancelar" />
+                </td>
+                <td>
                     <asp:Button ID="btnAgregar" runat="server" OnClick="btnAgregar_Click" Text="Agregar" />
                 </td>
-                <td>&nbsp;</td>
             </tr>
         </table>
     </asp:Panel>

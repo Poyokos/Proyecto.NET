@@ -13,5 +13,10 @@ namespace AplicacionASP
         {
 
         }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("Agregar.aspx");
+        }
     }
 }

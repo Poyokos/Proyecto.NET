@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Touristic
 {
-    class SitioTuristico
+    public class SitioTuristico
     {
         public string Nombre { get; set; }
         public string Direccion { get; set; }
-        public TimeSpan Horario { get; set; }
+        public TimeSpan Entrada { get; set; }
+        public TimeSpan Salida { get; set; }
         public Gratuito EsGratis { get; set; }
     }
 }
