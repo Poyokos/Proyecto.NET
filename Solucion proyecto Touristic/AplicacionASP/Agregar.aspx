@@ -18,10 +18,6 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style1">Fecha</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
             <td class="auto-style1">Nota</td>
             <td>
                 <asp:TextBox ID="txtNota" runat="server" ReadOnly="True"></asp:TextBox>
@@ -63,7 +59,7 @@
                 <asp:Button ID="btnCancelar" runat="server" OnClick="btnCancelar_Click" Text="Cancelar" />
             </td>
             <td>&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnAgregar" runat="server" Text="Agregar" />
+                <asp:Button ID="btnAgregar" runat="server" Text="Agregar" OnClick="btnAgregar_Click" />
             </td>
         </tr>
     </table>

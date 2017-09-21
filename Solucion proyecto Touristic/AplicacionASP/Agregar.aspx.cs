@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Touristic;
 
 namespace AplicacionASP
 {
@@ -44,6 +45,12 @@ namespace AplicacionASP
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
             Server.Transfer("Inicio.aspx");
+        }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Actividad actividad = new Actividad();
+            actividad.Nota = (Calificaciones)Session["_Calif"];
         }
     }
 }
