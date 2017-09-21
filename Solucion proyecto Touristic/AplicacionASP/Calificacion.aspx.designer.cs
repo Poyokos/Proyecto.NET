@@ -85,6 +85,15 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.RadioButton optAt7;
         
         /// <summary>
+        /// Control lblvAtractivo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblvAtractivo;
+        
+        /// <summary>
         /// Control optAu1.
         /// </summary>
         /// <remarks>
@@ -146,6 +155,15 @@ namespace AplicacionASP {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton optAu7;
+        
+        /// <summary>
+        /// Control lblvAutenticidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblvAutenticidad;
         
         /// <summary>
         /// Control optSi1.
@@ -211,6 +229,15 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.RadioButton optSi7;
         
         /// <summary>
+        /// Control lblvSingularidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblvSingularidad;
+        
+        /// <summary>
         /// Control optMu1.
         /// </summary>
         /// <remarks>
@@ -274,6 +301,15 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.RadioButton optMu7;
         
         /// <summary>
+        /// Control lblvMult_Actividades.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblvMult_Actividades;
+        
+        /// <summary>
         /// Control txtTotal.
         /// </summary>
         /// <remarks>
@@ -299,5 +335,14 @@ namespace AplicacionASP {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCalificar;
+        
+        /// <summary>
+        /// Control lblResumen.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResumen;
     }
 }

@@ -28,73 +28,77 @@
             <tr>
                 <td class="auto-style1">Atractivo:</td>
                 <td class="auto-style4">
-                    <asp:RadioButton ID="optAt1" runat="server" GroupName="gnAtractivo" Text=" " />
+                    <asp:RadioButton ID="optAt1" runat="server" GroupName="gnAtractivo" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optAt2" runat="server" GroupName="gnAtractivo" Text=" " />
+                    <asp:RadioButton ID="optAt2" runat="server" GroupName="gnAtractivo" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optAt3" runat="server" GroupName="gnAtractivo" Text=" " />
+                    <asp:RadioButton ID="optAt3" runat="server" GroupName="gnAtractivo" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optAt4" runat="server" GroupName="gnAtractivo" Text=" " />
+                    <asp:RadioButton ID="optAt4" runat="server" GroupName="gnAtractivo" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optAt5" runat="server" GroupName="gnAtractivo" Text=" " />
+                    <asp:RadioButton ID="optAt5" runat="server" GroupName="gnAtractivo" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optAt6" runat="server" GroupName="gnAtractivo" Text=" " />
+                    <asp:RadioButton ID="optAt6" runat="server" GroupName="gnAtractivo" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optAt7" runat="server" GroupName="gnAtractivo" Text=" " />
+                    <asp:RadioButton ID="optAt7" runat="server" GroupName="gnAtractivo" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
+                    &nbsp;<asp:Label ID="lblvAtractivo" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style1">Autenticidad:</td>
                 <td class="auto-style4">
-                    <asp:RadioButton ID="optAu1" runat="server" GroupName="gnAutenticidad" Text=" " />
+                    <asp:RadioButton ID="optAu1" runat="server" GroupName="gnAutenticidad" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optAu2" runat="server" GroupName="gnAutenticidad" Text=" " />
+                    <asp:RadioButton ID="optAu2" runat="server" GroupName="gnAutenticidad" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optAu3" runat="server" GroupName="gnAutenticidad" Text=" " />
+                    <asp:RadioButton ID="optAu3" runat="server" GroupName="gnAutenticidad" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optAu4" runat="server" GroupName="gnAutenticidad" Text=" " />
+                    <asp:RadioButton ID="optAu4" runat="server" GroupName="gnAutenticidad" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optAu5" runat="server" GroupName="gnAutenticidad" Text=" " />
+                    <asp:RadioButton ID="optAu5" runat="server" GroupName="gnAutenticidad" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optAu6" runat="server" GroupName="gnAutenticidad" Text=" " />
+                    <asp:RadioButton ID="optAu6" runat="server" GroupName="gnAutenticidad" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optAu7" runat="server" GroupName="gnAutenticidad" Text=" " />
+                    <asp:RadioButton ID="optAu7" runat="server" GroupName="gnAutenticidad" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
+                &nbsp;<asp:Label ID="lblvAutenticidad" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style1">Singularidad</td>
                 <td class="auto-style4">
-                    <asp:RadioButton ID="optSi1" runat="server" GroupName="gnSingularidad" Text=" " />
+                    <asp:RadioButton ID="optSi1" runat="server" GroupName="gnSingularidad" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optSi2" runat="server" GroupName="gnSingularidad" Text=" " />
+                    <asp:RadioButton ID="optSi2" runat="server" GroupName="gnSingularidad" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optSi3" runat="server" GroupName="gnSingularidad" Text=" " />
+                    <asp:RadioButton ID="optSi3" runat="server" GroupName="gnSingularidad" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optSi4" runat="server" GroupName="gnSingularidad" Text=" " />
+                    <asp:RadioButton ID="optSi4" runat="server" GroupName="gnSingularidad" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optSi5" runat="server" GroupName="gnSingularidad" Text=" " />
+                    <asp:RadioButton ID="optSi5" runat="server" GroupName="gnSingularidad" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optSi6" runat="server" GroupName="gnSingularidad" Text=" " />
+                    <asp:RadioButton ID="optSi6" runat="server" GroupName="gnSingularidad" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optSi7" runat="server" GroupName="gnSingularidad" Text=" " />
+                    <asp:RadioButton ID="optSi7" runat="server" GroupName="gnSingularidad" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
+                &nbsp;<asp:Label ID="lblvSingularidad" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style1">Multiplicidad de Actividades:</td>
                 <td class="auto-style4">
-                    <asp:RadioButton ID="optMu1" runat="server" GroupName="gnMultActividades" Text=" " />
+                    <asp:RadioButton ID="optMu1" runat="server" GroupName="gnMultActividades" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optMu2" runat="server" GroupName="gnMultActividades" Text=" " />
+                    <asp:RadioButton ID="optMu2" runat="server" GroupName="gnMultActividades" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optMu3" runat="server" GroupName="gnMultActividades" Text=" " />
+                    <asp:RadioButton ID="optMu3" runat="server" GroupName="gnMultActividades" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optMu4" runat="server" GroupName="gnMultActividades" Text=" " />
+                    <asp:RadioButton ID="optMu4" runat="server" GroupName="gnMultActividades" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optMu5" runat="server" GroupName="gnMultActividades" Text=" " />
+                    <asp:RadioButton ID="optMu5" runat="server" GroupName="gnMultActividades" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optMu6" runat="server" GroupName="gnMultActividades" Text=" " />
+                    <asp:RadioButton ID="optMu6" runat="server" GroupName="gnMultActividades" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="optMu7" runat="server" GroupName="gnMultActividades" Text=" " />
+                    <asp:RadioButton ID="optMu7" runat="server" GroupName="gnMultActividades" Text=" " AutoPostBack="True" OnCheckedChanged="optAt1_CheckedChanged" />
+                &nbsp;<asp:Label ID="lblvMult_Actividades" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -109,10 +113,13 @@
                     <asp:Button ID="btnCancelar" runat="server" OnClick="btnCancelar_Click" Text="Cancelar" />
                 </td>
                 <td class="auto-style4">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Button ID="btnCalificar" runat="server" Text="Calificar" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Button ID="btnCalificar" runat="server" Text="Calificar" OnClick="btnCalificar_Click" />
                 </td>
             </tr>
             </table>
+        <br />
+        <br />
+        <asp:Label ID="lblResumen" runat="server"></asp:Label>
         <br />
         <br />
         <br />
