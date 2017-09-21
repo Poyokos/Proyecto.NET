@@ -76,6 +76,7 @@ namespace AplicacionASP
             actividad.Visitante = (Turista)Session["miTurista"];
             actividad.Observacion = txtObservacion.Text;
             miColeccion.Add(actividad);
+            Server.Transfer("Inicio.aspx");
         }
     }
 }
