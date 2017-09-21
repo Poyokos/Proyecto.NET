@@ -10,6 +10,24 @@ namespace AplicacionASP
 {
     public partial class IngresoTurista : System.Web.UI.Page
     {
+        public Turista MiTurista
+        {
+            get
+            {
+                if (Session["miTurista"] == null)
+                {
+                    Session["miTurista"] = new Turista();
+                }
+
+                return (Turista)Session["miTurista"];
+            }
+
+            set
+            {
+                Session["miTurista"] = value;
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -22,8 +40,9 @@ namespace AplicacionASP
             turis.Edad = int.Parse(txtEdad.Text);
             turis.Nacionalidad = txtNacionalidad.Text;
             turis.Ndocumento = txtDocumento.Text;
+            MiTurista = turis;
 
-            Response.Redirect("Inicio.aspx");
+            Server.Transfer("Inicio.aspx");
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)

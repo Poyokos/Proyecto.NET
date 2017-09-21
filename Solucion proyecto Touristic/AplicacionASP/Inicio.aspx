@@ -21,22 +21,15 @@
             <br />
             <br />
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtComentario1" runat="server" Height="107px" TextMode="MultiLine" Width="385px"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtNota" runat="server" CssClass="auto-style1" Height="106px" ReadOnly="True" TextMode="Number" Width="174px"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
             <br />
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtNota0" runat="server" CssClass="auto-style1" Height="106px" ReadOnly="True" TextMode="Number" Width="174px"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtComentario2" runat="server" Height="107px" TextMode="MultiLine" Width="385px"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Table ID="tResumen" runat="server" Width="683px">
+            </asp:Table>
             <br />
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtComentario3" runat="server" Height="107px" TextMode="MultiLine" Width="385px"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtNota1" runat="server" CssClass="auto-style1" Height="106px" ReadOnly="True" TextMode="Number" Width="174px"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </asp:Panel>
         <br />
         <br />

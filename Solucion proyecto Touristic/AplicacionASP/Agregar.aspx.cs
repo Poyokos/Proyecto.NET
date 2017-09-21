@@ -10,6 +10,24 @@ namespace AplicacionASP
 {
     public partial class Agregar : System.Web.UI.Page
     {
+        public ActividadCollection miColeccion
+        {
+            get
+            {
+                if (Session["miColeccion"] == null)
+                {
+                    Session["miColeccion"] = new ActividadCollection();
+                }
+
+                return (ActividadCollection)Session["miColeccion"];
+            }
+
+            set
+            {
+                Session["miColeccion"] = value;
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -51,6 +69,9 @@ namespace AplicacionASP
         {
             Actividad actividad = new Actividad();
             actividad.Nota = (Calificaciones)Session["_Calif"];
+            actividad.Visitante = (Turista)Session["miTurista"];
+            actividad.Observacion = txtObservacion.Text;
+            miColeccion.Add(actividad);
         }
     }
 }
