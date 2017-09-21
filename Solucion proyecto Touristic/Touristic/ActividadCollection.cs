@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Touristic
 {
-    class ActividadCollection : List<Actividad>
+    public class ActividadCollection : List<Actividad>
     {
         
     }
