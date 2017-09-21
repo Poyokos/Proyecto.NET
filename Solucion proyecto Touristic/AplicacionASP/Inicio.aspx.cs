@@ -24,7 +24,7 @@ namespace AplicacionASP
             {
                 foreach (Actividad tmpact in coleccion)
                 {
-                    ListItem lista = new ListItem(string.Format("Comentario: {0}                Nota: {1}", tmpact.Observacion, tmpact.Nota.Total));
+                    ListItem lista = new ListItem(string.Format("Comentario: {0}                Nota: {1}          Nombre: {2}", tmpact.Observacion, tmpact.Nota.Total,tmpact.Visitante.Nombre));
                     lbResumen.Items.Add(lista);
                 }
 
@@ -35,7 +35,7 @@ namespace AplicacionASP
                     promedio = promedio + tmpact.Nota.Total;
                 }
 
-                promedio = promedio / coleccion.Count;
+                promedio = Math.Round((promedio / coleccion.Count),1);
 
                 lblPromedio.Text = string.Format("{0}",promedio);
             }
