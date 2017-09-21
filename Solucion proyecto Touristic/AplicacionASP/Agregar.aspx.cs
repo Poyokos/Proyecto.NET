@@ -30,7 +30,11 @@ namespace AplicacionASP
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["puntaje"] != null)
+            {
+                double nota = (double)Session["puntaje"];
+                txtNota.Text = nota.ToString();
+            }
         }
 
         protected void btnLugar_Click(object sender, EventArgs e)

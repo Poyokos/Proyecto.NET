@@ -28,7 +28,7 @@ namespace AplicacionASP
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
@@ -41,6 +41,7 @@ namespace AplicacionASP
             if (!Validar())
             {
                 Crear();
+                Session["puntaje"] = Calif.Total;
                 Server.Transfer("Agregar.aspx");
             }
         }
@@ -158,6 +159,7 @@ namespace AplicacionASP
         {
             Crear();
             txtTotal.Text = string.Format("{0}", Calif.Total);
+            
         }
     }
 }
