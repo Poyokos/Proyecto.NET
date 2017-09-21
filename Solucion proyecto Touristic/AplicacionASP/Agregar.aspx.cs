@@ -33,7 +33,7 @@ namespace AplicacionASP
 
         protected void btnNota_Click(object sender, EventArgs e)
         {
-            Server.Transfer("Calificacion.aspx");
+            Server.Transfer("Calificacion_Lugar.aspx");
         }
 
         protected void btnVolver_Click(object sender, EventArgs e)

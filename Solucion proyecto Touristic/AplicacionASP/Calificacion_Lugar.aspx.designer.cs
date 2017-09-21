@@ -10,16 +10,16 @@
 namespace AplicacionASP {
     
     
-    public partial class Calificacion {
+    public partial class Calificacion_Lugar {
         
         /// <summary>
-        /// Control form1.
+        /// Control lblAtractivo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lblAtractivo;
         
         /// <summary>
         /// Control optAt1.
@@ -94,6 +94,15 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.Label lblvAtractivo;
         
         /// <summary>
+        /// Control lblAutenticidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAutenticidad;
+        
+        /// <summary>
         /// Control optAu1.
         /// </summary>
         /// <remarks>
@@ -166,6 +175,15 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.Label lblvAutenticidad;
         
         /// <summary>
+        /// Control lblSingularidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSingularidad;
+        
+        /// <summary>
         /// Control optSi1.
         /// </summary>
         /// <remarks>
@@ -236,6 +254,15 @@ namespace AplicacionASP {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblvSingularidad;
+        
+        /// <summary>
+        /// Control lblMult_Actividades.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMult_Actividades;
         
         /// <summary>
         /// Control optMu1.
@@ -335,14 +362,5 @@ namespace AplicacionASP {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCalificar;
-        
-        /// <summary>
-        /// Control lblResumen.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblResumen;
     }
 }

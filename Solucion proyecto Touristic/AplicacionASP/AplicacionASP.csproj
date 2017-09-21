@@ -69,6 +69,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Agregar.aspx" />
+    <Content Include="Calificacion_Lugar.aspx" />
     <Content Include="IngresoTurista.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="Site1.Master" />
@@ -81,7 +82,6 @@
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Calificacion.aspx" />
     <Content Include="Lugares.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -93,12 +93,12 @@
     <Compile Include="Agregar.aspx.designer.cs">
       <DependentUpon>Agregar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Calificacion.aspx.cs">
-      <DependentUpon>Calificacion.aspx</DependentUpon>
+    <Compile Include="Calificacion_Lugar.aspx.cs">
+      <DependentUpon>Calificacion_Lugar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Calificacion.aspx.designer.cs">
-      <DependentUpon>Calificacion.aspx</DependentUpon>
+    <Compile Include="Calificacion_Lugar.aspx.designer.cs">
+      <DependentUpon>Calificacion_Lugar.aspx</DependentUpon>
     </Compile>
     <Compile Include="IngresoTurista.aspx.cs">
       <DependentUpon>IngresoTurista.aspx</DependentUpon>

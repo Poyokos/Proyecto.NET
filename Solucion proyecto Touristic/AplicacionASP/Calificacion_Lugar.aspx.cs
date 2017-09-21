@@ -8,7 +8,7 @@ using Touristic;
 
 namespace AplicacionASP
 {
-    public partial class Calificacion : System.Web.UI.Page
+    public partial class Calificacion_Lugar : System.Web.UI.Page
     {
         public Calificaciones Calif
         {
@@ -104,7 +104,6 @@ namespace AplicacionASP
             calif.Autenticidad = Autenticidad();
             calif.Singularidad = Singularidad();
             calif.Mult_actividades = Mult_Actividades();
-            lblResumen.Text = "" + calif.Atractivo + " - " + calif.Autenticidad + " - " + calif.Singularidad + " - " + calif.Mult_actividades;
             Calif = calif;
         }
 
