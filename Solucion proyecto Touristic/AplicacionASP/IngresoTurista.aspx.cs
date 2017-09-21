@@ -42,7 +42,7 @@ namespace AplicacionASP
             turis.Ndocumento = txtDocumento.Text;
             MiTurista = turis;
 
-            Server.Transfer("Inicio.aspx");
+            Server.Transfer("Agregar.aspx");
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
