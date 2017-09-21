@@ -19,13 +19,25 @@ namespace AplicacionASP
         {
             ActividadCollection coleccion = new ActividadCollection();
             coleccion = (ActividadCollection)Session["miColeccion"];
+            double promedio = 0;
             if (coleccion != null)
             {
                 foreach (Actividad tmpact in coleccion)
                 {
-                    ListItem lista = new ListItem(string.Format("{0}       {1}", tmpact.Observacion, tmpact.Nota.Total));
+                    ListItem lista = new ListItem(string.Format("Comentario: {0}                Nota: {1}", tmpact.Observacion, tmpact.Nota.Total));
                     lbResumen.Items.Add(lista);
                 }
+
+                lblCantComentarios.Text = string.Format("{0}",coleccion.Count);
+
+                foreach (Actividad tmpact in coleccion)
+                {
+                    promedio = promedio + tmpact.Nota.Total;
+                }
+
+                promedio = promedio / coleccion.Count;
+
+                lblPromedio.Text = string.Format("{0}",promedio);
             }
             
         }
