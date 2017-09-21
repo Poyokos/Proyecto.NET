@@ -20,7 +20,7 @@
         <tr>
             <td class="auto-style1">Nota</td>
             <td>
-                <asp:TextBox ID="txtNota" runat="server" ReadOnly="True"></asp:TextBox>
+                <asp:TextBox ID="txtNota" runat="server" ReadOnly="True" Width="33px"></asp:TextBox>
                 <asp:Button ID="btnNota" runat="server" Text="Puntuar" OnClick="btnNota_Click" />
             </td>
         </tr>

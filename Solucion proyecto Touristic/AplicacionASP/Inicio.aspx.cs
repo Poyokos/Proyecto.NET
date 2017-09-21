@@ -39,7 +39,7 @@ namespace AplicacionASP
 
                 lblPromedio.Text = string.Format("{0}",promedio);
             }
-            
+            Session["puntaje"] = 0.0;
         }
     }
 }

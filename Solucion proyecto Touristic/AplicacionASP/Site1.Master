@@ -11,35 +11,17 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:Panel ID="Panel1" runat="server">
+            <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1">
+            </asp:Menu>
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+            <br />
+            <br />
+            <br />
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+            </asp:SiteMapPath>
+        </asp:Panel>
         <div>
-            <asp:Panel ID="Panel1" runat="server">
-<<<<<<< HEAD
-                <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1">
-=======
-                <asp:Menu ID="Menu1" runat="server" BackColor="#FFFBD6" DataSourceID="SiteMapDataSource1" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" StaticSubMenuIndent="10px">
-                    <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
-                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                    <DynamicMenuStyle BackColor="#FFFBD6" />
-                    <DynamicSelectedStyle BackColor="#FFCC66" />
-                    <StaticHoverStyle BackColor="#990000" ForeColor="White" />
-                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                    <StaticSelectedStyle BackColor="#FFCC66" />
->>>>>>> b1c474ac41194c33e4b42a2cea61052c7efdf9e6
-                </asp:Menu>
-                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
-                <br />
-                <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="0.8em" PathSeparator=" : ">
-                    <CurrentNodeStyle ForeColor="#333333" />
-                    <NodeStyle Font-Bold="True" ForeColor="#7C6F57" />
-                    <PathSeparatorStyle Font-Bold="True" ForeColor="#5D7B9D" />
-                    <RootNodeStyle Font-Bold="True" ForeColor="#5D7B9D" />
-                </asp:SiteMapPath>
-                <br />
-                <br />
-                <asp:SiteMapPath ID="SiteMapPath1" runat="server">
-                </asp:SiteMapPath>
-                <br />
-            </asp:Panel>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
