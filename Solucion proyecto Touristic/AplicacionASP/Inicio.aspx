@@ -24,8 +24,9 @@
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
             <asp:ListBox ID="lbResumen" runat="server" Height="274px" Width="502px" CssClass="auto-style2"></asp:ListBox>
-            <br />
         </asp:Panel>
+        <br />
+        <br />
         <br />
         - Promedio:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblPromedio" runat="server"></asp:Label>

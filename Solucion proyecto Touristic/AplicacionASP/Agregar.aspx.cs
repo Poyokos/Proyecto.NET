@@ -90,6 +90,7 @@ namespace AplicacionASP
             Actividad actividad = new Actividad();
             actividad.Nota = (Calificaciones)Session["_Calif"];
             actividad.Visitante = (Turista)Session["miTurista"];
+            actividad.Lugar = (SitioTuristico)Sitios[ddlLugares.SelectedIndex];
             actividad.Observacion = txtObservacion.Text;
             miColeccion.Add(actividad);
             Server.Transfer("Inicio.aspx");

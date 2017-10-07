@@ -26,7 +26,6 @@ namespace AplicacionASP
         protected void Page_Load(object sender, EventArgs e)
         {
             Cargar();
-
             if (!IsPostBack)
             {
                 foreach (var tempSitio in Sitios)
@@ -36,6 +35,7 @@ namespace AplicacionASP
                 }
             }
         }
+
 
         public void Cargar()
         {
