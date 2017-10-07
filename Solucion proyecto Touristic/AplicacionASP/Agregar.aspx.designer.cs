@@ -31,6 +31,15 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.DropDownList ddlLugares;
         
         /// <summary>
+        /// Control rfvLugar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLugar;
+        
+        /// <summary>
         /// Control txtNota.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.Button btnNota;
         
         /// <summary>
+        /// Control rfvPuntos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPuntos;
+        
+        /// <summary>
         /// Control txtObservacion.
         /// </summary>
         /// <remarks>
@@ -56,6 +74,24 @@ namespace AplicacionASP {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtObservacion;
+        
+        /// <summary>
+        /// Control rfvObservacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvObservacion;
+        
+        /// <summary>
+        /// Control ValidationSummary1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
         
         /// <summary>
         /// Control btnVolver.

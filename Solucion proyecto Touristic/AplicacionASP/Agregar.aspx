@@ -14,6 +14,7 @@
             <td>
                 <asp:DropDownList ID="ddlLugares" runat="server">
                 </asp:DropDownList>
+                <asp:RequiredFieldValidator ID="rfvLugar" runat="server" ControlToValidate="ddlLugares" ErrorMessage="Debe ingresar un lugar">(*) Obligatorio</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -21,12 +22,14 @@
             <td>
                 <asp:TextBox ID="txtNota" runat="server" ReadOnly="True" Width="33px"></asp:TextBox>
                 <asp:Button ID="btnNota" runat="server" Text="Puntuar" OnClick="btnNota_Click" />
+                <asp:RequiredFieldValidator ID="rfvPuntos" runat="server" ControlToValidate="txtNota" ErrorMessage="Se requiere una puntuacion">(*) Obligatorio</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
             <td class="auto-style1">Observacion</td>
-            <td>
+            <td aria-atomic="True">
                 <asp:TextBox ID="txtObservacion" runat="server" Rows="3" TextMode="MultiLine"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="rfvObservacion" runat="server" ControlToValidate="txtObservacion" ErrorMessage="Tiene que dejar una observacion del luger">(*) Obligatorio</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -36,7 +39,9 @@
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+            </td>
         </tr>
         <tr>
             <td class="auto-style1">
