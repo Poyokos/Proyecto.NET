@@ -58,33 +58,6 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.TextBox txtObservacion;
         
         /// <summary>
-        /// Control rbSi.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbSi;
-        
-        /// <summary>
-        /// Control rbNo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbNo;
-        
-        /// <summary>
-        /// Control btnAtraccion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAtraccion;
-        
-        /// <summary>
         /// Control btnVolver.
         /// </summary>
         /// <remarks>

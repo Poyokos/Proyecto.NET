@@ -30,19 +30,6 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style1">¿Desea agregar<br /> comentario de alguna atraccion?</td>
-            <td>
-                <asp:RadioButton ID="rbSi" runat="server" Text="Si" AutoPostBack="True" GroupName="atraccionGroup" OnCheckedChanged="rbSi_CheckedChanged" />
-                <asp:RadioButton ID="rbNo" runat="server" Text="No" AutoPostBack="True" GroupName="atraccionGroup" OnCheckedChanged="rbSi_CheckedChanged" />
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style1">Atraccion</td>
-            <td>
-                <asp:Button ID="btnAtraccion" runat="server" Text="Agregar" Enabled="False" />
-            </td>
-        </tr>
-        <tr>
             <td class="auto-style1">
                 &nbsp;</td>
             <td>&nbsp;</td>

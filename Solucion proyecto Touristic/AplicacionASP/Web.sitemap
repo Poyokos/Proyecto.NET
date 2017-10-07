@@ -11,7 +11,6 @@
     <siteMapNode title="Administración">
       
       <siteMapNode url="NuevoLugar.aspx" title="Lugares" />
-      <siteMapNode url="Atracciones.aspx" title="Atracciones" />
     
     </siteMapNode>
   
