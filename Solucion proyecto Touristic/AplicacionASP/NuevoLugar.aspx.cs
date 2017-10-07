@@ -8,7 +8,7 @@ using Touristic;
 
 namespace AplicacionASP
 {
-    public partial class Lugares : System.Web.UI.Page
+    public partial class NuevoLugar : System.Web.UI.Page
     {
         //Campo con lugares en agregados sesión
         public SitioCollection Sitios
@@ -27,14 +27,14 @@ namespace AplicacionASP
                 Session["lugares"] = value;
             }
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 CargarDDl();
-            }            
+            }
         }
-
         private void CargarDDl()
         {
             ddApertura.Items.Add("AM");
@@ -54,9 +54,16 @@ namespace AplicacionASP
 
             sitio.Nombre = txtNombre.Text;
             sitio.Direccion = txtDireccion.Text;
-            /*sitio.Entrada = TimeSpan.Parse(string.Format("{0}:{1}", hEntrada, mEntrada));
-            sitio.Salida = TimeSpan.Parse(string.Format("{0}:{1}", hSalida, mSalida));
-            //sitio.EsGratis = (Gratuito)*/
+            sitio.Entrada = TimeSpan.Parse(string.Format("{0}:{1}", hEntrada.Text, mEntrada.Text));
+            sitio.Salida = TimeSpan.Parse(string.Format("{0}:{1}", hSalida.Text, mSalida.Text));
+            if (rbSi.Checked)
+            {
+                sitio.EsGratis = Gratuito.Si;
+            }
+            else
+            {
+                sitio.EsGratis = Gratuito.No;
+            }
             sitio.Atracciones = new List<Atraccion>();
 
             Sitios.Add(sitio);

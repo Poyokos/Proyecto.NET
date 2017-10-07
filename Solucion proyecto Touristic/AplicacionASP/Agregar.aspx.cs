@@ -28,12 +28,39 @@ namespace AplicacionASP
             }
         }
 
+        public SitioCollection Sitios
+        {
+            get
+            {
+                if (Session["lugares"] == null)
+                {
+                    Session["lugares"] = new SitioCollection();
+                }
+
+                return (SitioCollection)Session["lugares"];
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["puntaje"] != null)
             {
                 double nota = (double)Session["puntaje"];
                 txtNota.Text = nota.ToString();
+            }
+
+            if (!IsPostBack)
+            {
+                this.cargarDdl();
+            }
+        }
+
+        private void cargarDdl()
+        {
+            foreach (var tempSitio in Sitios)
+            {
+                ListItem item = new ListItem(string.Format("{0}", tempSitio.Nombre));
+                ddlLugares.Items.Add(item);
             }
         }
 

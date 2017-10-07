@@ -1,11 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
   <siteMapNode url="Inicio.aspx" title="Inicio" >
+    
     <siteMapNode url="IngresoTurista.aspx" title="Agregar Critica" >
+      
       <siteMapNode url="Agregar.aspx" title="Detalle de Actividades" >
+        
         <siteMapNode url="Calificacion_Lugar.aspx" title="Calificaccion" />
-        <siteMapNode url="Lugares.aspx" title="Lugares" />
+      
       </siteMapNode>
+      
     </siteMapNode>
+    
+    <siteMapNode title="Administración">
+      
+      <siteMapNode url="NuevoLugar.aspx" title="Lugares" />
+      <siteMapNode url="Atracciones.aspx" title="Atracciones" />
+    
+    </siteMapNode>
+  
   </siteMapNode>
 </siteMap>

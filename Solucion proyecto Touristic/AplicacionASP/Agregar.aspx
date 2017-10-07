@@ -12,9 +12,8 @@
         <tr>
             <td class="auto-style1">Lugar</td>
             <td>
-                <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:DropDownList ID="ddlLugares" runat="server">
                 </asp:DropDownList>
-                <asp:Button ID="btnLugar" runat="server" Text="Agregar" OnClick="btnLugar_Click" />
             </td>
         </tr>
         <tr>

@@ -24,5 +24,15 @@ namespace Touristic
         {
             FechaDeCritica = DateTime.Today;
         }
+
+        //Entregar información de actividad
+        public override string ToString()
+        {
+            return string.Format("Visitante: {0} Pais: {1} Comentario: {2} Nota: {3}",
+                Visitante.Nombre,
+                Visitante.Nacionalidad,
+                Observacion,
+                Nota.Total);
+        }
     }
 }

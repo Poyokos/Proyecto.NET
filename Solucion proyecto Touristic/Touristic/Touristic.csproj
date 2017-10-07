@@ -45,6 +45,7 @@
     <Compile Include="Atraccion.cs" />
     <Compile Include="Calificaciones.cs" />
     <Compile Include="Parametros.cs" />
+    <Compile Include="SitioCollection.cs" />
     <Compile Include="SitioTuristico.cs" />
     <Compile Include="Turista.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

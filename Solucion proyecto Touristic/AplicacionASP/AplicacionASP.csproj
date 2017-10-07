@@ -69,9 +69,11 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Agregar.aspx" />
+    <Content Include="Atracciones.aspx" />
     <Content Include="Calificacion_Lugar.aspx" />
     <Content Include="IngresoTurista.aspx" />
     <Content Include="Inicio.aspx" />
+    <Content Include="NuevoLugar.aspx" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -92,6 +94,13 @@
     </Compile>
     <Compile Include="Agregar.aspx.designer.cs">
       <DependentUpon>Agregar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Atracciones.aspx.cs">
+      <DependentUpon>Atracciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Atracciones.aspx.designer.cs">
+      <DependentUpon>Atracciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Calificacion_Lugar.aspx.cs">
       <DependentUpon>Calificacion_Lugar.aspx</DependentUpon>
@@ -120,6 +129,13 @@
     </Compile>
     <Compile Include="Lugares.aspx.designer.cs">
       <DependentUpon>Lugares.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoLugar.aspx.cs">
+      <DependentUpon>NuevoLugar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevoLugar.aspx.designer.cs">
+      <DependentUpon>NuevoLugar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">

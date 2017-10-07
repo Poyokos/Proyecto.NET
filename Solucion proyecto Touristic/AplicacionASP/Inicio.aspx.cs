@@ -10,23 +10,44 @@ namespace AplicacionASP
 {
     public partial class Inicio : System.Web.UI.Page
     {
+        public SitioCollection Sitios
+        {
+            get
+            {
+                if (Session["lugares"] == null)
+                {
+                    Session["lugares"] = new SitioCollection();
+                }
+
+                return (SitioCollection)Session["lugares"];
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             Cargar();
+
+            if (!IsPostBack)
+            {
+                foreach (var tempSitio in Sitios)
+                {
+                    ListItem item = new ListItem(string.Format("{0}", tempSitio.Nombre));
+                    ddlLugares.Items.Add(item);
+                }
+            }
         }
 
         public void Cargar()
         {
             ActividadCollection coleccion = new ActividadCollection();
             coleccion = (ActividadCollection)Session["miColeccion"];
+
             double promedio = 0;
             if (coleccion != null)
             {
-                foreach (Actividad tmpact in coleccion)
-                {
-                    ListItem lista = new ListItem(string.Format("Comentario: {0}                Nota: {1}          Nombre: {2}", tmpact.Observacion, tmpact.Nota.Total,tmpact.Visitante.Nombre));
-                    lbResumen.Items.Add(lista);
-                }
+                //Cargar listBox con comentarios
+                lbResumen.DataSource = coleccion;
+                lbResumen.DataBind();
 
                 lblCantComentarios.Text = string.Format("{0}",coleccion.Count);
 
@@ -37,9 +58,27 @@ namespace AplicacionASP
 
                 promedio = Math.Round((promedio / coleccion.Count),1);
 
-                lblPromedio.Text = string.Format("{0}",promedio);
+                lblPromedio.Text = string.Format("{0}", promedio);
             }
             Session["puntaje"] = 0.0;
+        }
+
+        protected void ddlLugares_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Cambiar items de atracciones según lugar
+            ddlAtraccion.Items.Clear();
+
+            foreach (var tempSitio in Sitios)
+            {
+                if (ddlLugares.SelectedValue == tempSitio.Nombre)
+                {
+                    foreach (var item in tempSitio.Atracciones)
+                    {
+                        ListItem op = new ListItem(string.Format("{0}", item.Nombre));
+                        ddlAtraccion.Items.Add(op);
+                    }
+                }
+            }
         }
     }
 }
