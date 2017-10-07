@@ -29,10 +29,10 @@
                     <asp:RequiredFieldValidator ID="rfvNom" runat="server" ControlToValidate="txtNombre" ErrorMessage="Nombre es Obligatorio">*</asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style2">Numero de Documento:&nbsp;
-                    <asp:TextBox ID="txtDocumento" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtDocumento" runat="server" MaxLength="9"></asp:TextBox>
                     <asp:CompareValidator ID="cvDoc" runat="server" ControlToValidate="txtDocumento" ErrorMessage="N°Documento debe ser en numeros" Operator="DataTypeCheck" Type="Integer">*</asp:CompareValidator>
                     <asp:RequiredFieldValidator ID="rfvDoc" runat="server" ControlToValidate="txtDocumento" ErrorMessage="N°Documento es obligatorio">*</asp:RequiredFieldValidator>
-                </td>
+                    &nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Maximo 9 digitos sin puntos ni guiones)</td>
             </tr>
             <tr>
                 <td class="auto-style4">Edad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
