@@ -4,8 +4,6 @@
     
     <siteMapNode url="IngresoTurista.aspx" title="Agregar Critica" >
       
-      <siteMapNode url="Agregar.aspx" title="Detalle de Actividades" />
-      
     </siteMapNode>
     
     <siteMapNode title="Administración">
