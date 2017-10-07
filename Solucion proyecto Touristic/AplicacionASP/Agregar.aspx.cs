@@ -69,17 +69,6 @@ namespace AplicacionASP
             Server.Transfer("Lugares.aspx");
         }
 
-        protected void rbSi_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbSi.Checked)
-            {
-                btnAtraccion.Enabled = true;
-            }
-            else
-            {
-                btnAtraccion.Enabled = false;
-            }
-        }
 
         protected void btnNota_Click(object sender, EventArgs e)
         {

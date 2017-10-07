@@ -57,7 +57,7 @@ namespace AplicacionASP
             /*sitio.Entrada = TimeSpan.Parse(string.Format("{0}:{1}", hEntrada, mEntrada));
             sitio.Salida = TimeSpan.Parse(string.Format("{0}:{1}", hSalida, mSalida));
             //sitio.EsGratis = (Gratuito)*/
-            sitio.Atracciones = new List<Atraccion>();
+            //sitio.Atracciones = new List<Atraccion>(); Este no va ya que sacamos las atracciones
 
             Sitios.Add(sitio);
         }

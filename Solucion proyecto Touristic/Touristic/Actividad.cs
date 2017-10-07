@@ -13,7 +13,7 @@ namespace Touristic
         public DateTime FechaDeCritica { get; set; }
         public Calificaciones Nota { get; set; }
         public string Observacion { get; set; }
-        public Atraccion Atracciones { get; set; }
+        //public Atraccion Atracciones { get; set; }
 
         public Actividad()
         {

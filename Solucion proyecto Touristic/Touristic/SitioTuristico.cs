@@ -13,6 +13,6 @@ namespace Touristic
         public TimeSpan Entrada { get; set; }
         public TimeSpan Salida { get; set; }
         public Gratuito EsGratis { get; set; }
-        public List<Atraccion> Atracciones { get; set; }
+        //public List<Atraccion> Atracciones { get; set; } Este no va
     }
 }
