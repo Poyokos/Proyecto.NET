@@ -4,11 +4,7 @@
     
     <siteMapNode url="IngresoTurista.aspx" title="Agregar Critica" >
       
-      <siteMapNode url="Agregar.aspx" title="Detalle de Actividades" >
-        
-        <siteMapNode url="Calificacion_Lugar.aspx" title="Calificaccion" />
-      
-      </siteMapNode>
+      <siteMapNode url="Agregar.aspx" title="Detalle de Actividades" />
       
     </siteMapNode>
     
