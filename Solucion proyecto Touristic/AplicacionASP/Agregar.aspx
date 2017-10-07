@@ -21,7 +21,7 @@
             <td class="auto-style1">Nota</td>
             <td>
                 <asp:TextBox ID="txtNota" runat="server" ReadOnly="True" Width="33px"></asp:TextBox>
-                <asp:Button ID="btnNota" runat="server" Text="Puntuar" OnClick="btnNota_Click" />
+                <asp:Button ID="btnNota" runat="server" Text="Puntuar" OnClick="btnNota_Click" CausesValidation="False" />
                 <asp:RequiredFieldValidator ID="rfvPuntos" runat="server" ControlToValidate="txtNota" ErrorMessage="Se requiere una puntuacion">(*) Obligatorio</asp:RequiredFieldValidator>
             </td>
         </tr>
@@ -29,7 +29,7 @@
             <td class="auto-style1">Observacion</td>
             <td aria-atomic="True">
                 <asp:TextBox ID="txtObservacion" runat="server" Rows="3" TextMode="MultiLine"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="rfvObservacion" runat="server" ControlToValidate="txtObservacion" ErrorMessage="Tiene que dejar una observacion del luger">(*) Obligatorio</asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="rfvObservacion" runat="server" ControlToValidate="txtObservacion" ErrorMessage="Tiene que dejar una observacion del lugar">(*) Obligatorio</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
