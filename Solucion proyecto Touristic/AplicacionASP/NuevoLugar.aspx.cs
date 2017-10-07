@@ -64,7 +64,7 @@ namespace AplicacionASP
             {
                 sitio.EsGratis = Gratuito.No;
             }
-            sitio.Atracciones = new List<Atraccion>();
+            //sitio.Atracciones = new List<Atraccion>();
 
             Sitios.Add(sitio);
         }

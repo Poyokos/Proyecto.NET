@@ -41,17 +41,17 @@ namespace AplicacionASP
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            Atraccion nuevo = new Atraccion();
+            //Atraccion nuevo = new Atraccion();
 
-            nuevo.Nombre = txtNombre.Text;
+            //nuevo.Nombre = txtNombre.Text;
             
-            foreach (var tempSitio in Sitios)
-            {
-                if (tempSitio.Nombre.Equals(ddlLugares.SelectedValue))
-                {
-                    tempSitio.Atracciones.Add(nuevo);
-                }
-            }
+            //foreach (var tempSitio in Sitios)
+            //{
+            //    if (tempSitio.Nombre.Equals(ddlLugares.SelectedValue))
+            //    {
+            //        tempSitio.Atracciones.Add(nuevo);
+            //    }
+            //}
         }
     }
 }

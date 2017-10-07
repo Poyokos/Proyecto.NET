@@ -66,19 +66,19 @@ namespace AplicacionASP
         protected void ddlLugares_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Cambiar items de atracciones según lugar
-            ddlAtraccion.Items.Clear();
+            //ddlAtraccion.Items.Clear();
 
-            foreach (var tempSitio in Sitios)
-            {
-                if (ddlLugares.SelectedValue == tempSitio.Nombre)
-                {
-                    foreach (var item in tempSitio.Atracciones)
-                    {
-                        ListItem op = new ListItem(string.Format("{0}", item.Nombre));
-                        ddlAtraccion.Items.Add(op);
-                    }
-                }
-            }
+            //foreach (var tempSitio in Sitios)
+            //{
+            //    if (ddlLugares.SelectedValue == tempSitio.Nombre)
+            //    {
+            //        foreach (var item in tempSitio.Atracciones)
+            //        {
+            //            ListItem op = new ListItem(string.Format("{0}", item.Nombre));
+            //            ddlAtraccion.Items.Add(op);
+            //        }
+            //    }
+            //}
         }
     }
 }
