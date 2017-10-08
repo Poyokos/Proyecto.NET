@@ -45,9 +45,9 @@
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" />
+                <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" CausesValidation="False" />
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnCancelar" runat="server" OnClick="btnCancelar_Click" Text="Cancelar" />
+                <asp:Button ID="btnCancelar" runat="server" OnClick="btnCancelar_Click" Text="Cancelar" CausesValidation="False" />
             </td>
             <td>&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnAgregar" runat="server" Text="Agregar" OnClick="btnAgregar_Click" />
