@@ -14,13 +14,10 @@
     <asp:Panel ID="Panel1" runat="server" Height="423px">
         <asp:Panel ID="Panel2" runat="server" CssClass="auto-style1" Height="382px">
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Lugares:&nbsp;&nbsp;
-            <asp:DropDownList ID="ddlLugares" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlLugares_SelectedIndexChanged">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Gratuito:&nbsp;&nbsp;
+            <asp:DropDownList ID="ddlGratuito" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlLugares_SelectedIndexChanged">
             </asp:DropDownList>
-            &nbsp;&nbsp; - Atracción:&nbsp;&nbsp;
-            <asp:DropDownList ID="ddlAtraccion" runat="server">
-            </asp:DropDownList>
-            <br />
+            &nbsp;<br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
             <asp:ListBox ID="lbResumen" runat="server" Height="274px" Width="502px" CssClass="auto-style2"></asp:ListBox>

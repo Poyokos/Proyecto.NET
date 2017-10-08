@@ -28,11 +28,10 @@ namespace AplicacionASP
             Cargar();
             if (!IsPostBack)
             {
-                foreach (var tempSitio in Sitios)
-                {
-                    ListItem item = new ListItem(string.Format("{0}", tempSitio.Nombre));
-                    ddlLugares.Items.Add(item);
-                }
+                ddlGratuito.Items.Add("Ambos");
+                ddlGratuito.Items.Add(Gratuito.Si.ToString());
+                ddlGratuito.Items.Add(Gratuito.No.ToString());
+                ddlGratuito.SelectedIndex = 0;
             }
         }
 
@@ -60,25 +59,12 @@ namespace AplicacionASP
 
                 lblPromedio.Text = string.Format("{0}", promedio);
             }
-            Session["puntaje"] = 0.0;
         }
 
         protected void ddlLugares_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Cambiar items de atracciones según lugar
-            //ddlAtraccion.Items.Clear();
-
-            //foreach (var tempSitio in Sitios)
-            //{
-            //    if (ddlLugares.SelectedValue == tempSitio.Nombre)
-            //    {
-            //        foreach (var item in tempSitio.Atracciones)
-            //        {
-            //            ListItem op = new ListItem(string.Format("{0}", item.Nombre));
-            //            ddlAtraccion.Items.Add(op);
-            //        }
-            //    }
-            //}
+            
         }
     }
 }

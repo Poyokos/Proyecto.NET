@@ -14,19 +14,22 @@
             <td>
                 <asp:DropDownList ID="ddlLugares" runat="server">
                 </asp:DropDownList>
+                <asp:RequiredFieldValidator ID="rfvLugar" runat="server" ControlToValidate="ddlLugares" ErrorMessage="Debe ingresar un lugar">(*) Obligatorio</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
             <td class="auto-style1">Nota</td>
             <td>
                 <asp:TextBox ID="txtNota" runat="server" ReadOnly="True" Width="33px"></asp:TextBox>
-                <asp:Button ID="btnNota" runat="server" Text="Puntuar" OnClick="btnNota_Click" />
+                <asp:Button ID="btnNota" runat="server" Text="Puntuar" OnClick="btnNota_Click" CausesValidation="False" />
+                <asp:RequiredFieldValidator ID="rfvPuntos" runat="server" ControlToValidate="txtNota" ErrorMessage="Se requiere una puntuacion">(*) Obligatorio</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
             <td class="auto-style1">Observacion</td>
-            <td>
+            <td aria-atomic="True">
                 <asp:TextBox ID="txtObservacion" runat="server" Rows="3" TextMode="MultiLine"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="rfvObservacion" runat="server" ControlToValidate="txtObservacion" ErrorMessage="Tiene que dejar una observacion del lugar">(*) Obligatorio</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -36,13 +39,15 @@
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+            </td>
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" />
+                <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" CausesValidation="False" />
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnCancelar" runat="server" OnClick="btnCancelar_Click" Text="Cancelar" />
+                <asp:Button ID="btnCancelar" runat="server" OnClick="btnCancelar_Click" Text="Cancelar" CausesValidation="False" />
             </td>
             <td>&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnAgregar" runat="server" Text="Agregar" OnClick="btnAgregar_Click" />
