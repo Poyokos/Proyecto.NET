@@ -93,6 +93,7 @@ namespace AplicacionASP
             actividad.Lugar = (SitioTuristico)Sitios[ddlLugares.SelectedIndex];
             actividad.Observacion = txtObservacion.Text;
             miColeccion.Add(actividad);
+            Session["puntaje"] = null;
             Server.Transfer("Inicio.aspx");
         }
     }
