@@ -27,22 +27,25 @@
                 <td class="auto-style3">Nombre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvNom" runat="server" ControlToValidate="txtNombre" ErrorMessage="Nombre es Obligatorio">*</asp:RequiredFieldValidator>
+                    <asp:CompareValidator ID="valNombre" runat="server" ControlToValidate="txtNombre" ErrorMessage="Nombre debe ser con letras" Operator="DataTypeCheck">*</asp:CompareValidator>
                 </td>
                 <td class="auto-style2">Numero de Documento:&nbsp;
-                    <asp:TextBox ID="txtDocumento" runat="server" MaxLength="9"></asp:TextBox>
+                    <asp:TextBox ID="txtDocumento" runat="server" MaxLength="9" OnTextChanged="txtDocumento_TextChanged"></asp:TextBox>
                     <asp:CompareValidator ID="cvDoc" runat="server" ControlToValidate="txtDocumento" ErrorMessage="N°Documento debe ser en numeros" Operator="DataTypeCheck" Type="Integer">*</asp:CompareValidator>
                     <asp:RequiredFieldValidator ID="rfvDoc" runat="server" ControlToValidate="txtDocumento" ErrorMessage="N°Documento es obligatorio">*</asp:RequiredFieldValidator>
-                    &nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Maximo 9 digitos sin puntos ni guiones)</td>
+                    <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Maximo 9 digitos sin puntos ni guiones)</td>
             </tr>
             <tr>
                 <td class="auto-style4">Edad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="txtEdad" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvEdad" runat="server" ControlToValidate="txtEdad" ErrorMessage="Edad Es Obligatorio">*</asp:RequiredFieldValidator>
                     <asp:CompareValidator ID="cvEdad" runat="server" ControlToValidate="txtEdad" ErrorMessage="Edad debe ser en numeros" Operator="DataTypeCheck" Type="Integer">*</asp:CompareValidator>
+                    <asp:RangeValidator ID="RangoEdad" runat="server" ControlToValidate="txtEdad" ErrorMessage="Edad debe ser entre 17 y 60 años" MaximumValue="60" MinimumValue="17" Type="Integer">*</asp:RangeValidator>
                 </td>
                 <td class="auto-style1">Nacionalidad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="txtNacionalidad" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvNac" runat="server" ControlToValidate="txtNacionalidad" ErrorMessage="Nacionalidad es obligatoria">*</asp:RequiredFieldValidator>
+                    <asp:CompareValidator ID="valNaciona" runat="server" ControlToValidate="txtNacionalidad" ErrorMessage="Nombre debe ser con letras" Operator="DataTypeCheck">*</asp:CompareValidator>
                 </td>
             </tr>
             <tr>

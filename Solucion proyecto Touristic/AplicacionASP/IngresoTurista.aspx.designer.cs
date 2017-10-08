@@ -40,6 +40,15 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNom;
         
         /// <summary>
+        /// Control valNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator valNombre;
+        
+        /// <summary>
         /// Control txtDocumento.
         /// </summary>
         /// <remarks>
@@ -94,6 +103,15 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.CompareValidator cvEdad;
         
         /// <summary>
+        /// Control RangoEdad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangoEdad;
+        
+        /// <summary>
         /// Control txtNacionalidad.
         /// </summary>
         /// <remarks>
@@ -110,6 +128,15 @@ namespace AplicacionASP {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNac;
+        
+        /// <summary>
+        /// Control valNaciona.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator valNaciona;
         
         /// <summary>
         /// Control btnCancelar.

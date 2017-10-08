@@ -30,11 +30,11 @@ namespace AplicacionASP
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btnAgregar_Click(object sender, EventArgs e)
-        {
+        {          
             Turista turis = new Turista();
             turis.Nombre = txtNombre.Text;
             turis.Edad = int.Parse(txtEdad.Text);
@@ -48,6 +48,12 @@ namespace AplicacionASP
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
             Response.Redirect("Inicio.aspx");
+        }
+
+        protected void txtDocumento_TextChanged(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }
