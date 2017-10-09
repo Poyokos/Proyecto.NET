@@ -23,20 +23,39 @@ namespace AplicacionASP
             }
         }
 
-        protected void Page_Load(object sender, EventArgs e)
+        public ActividadCollection Actividades
         {
-            Cargar();
-            if (!IsPostBack)
+            get
             {
-                ddlGratuito.Items.Add("Ambos");
-                ddlGratuito.Items.Add(Gratuito.Si.ToString());
-                ddlGratuito.Items.Add(Gratuito.No.ToString());
-                ddlGratuito.SelectedIndex = 0;
+                if (Session["miColeccion"] == null)
+                {
+                    Session["miColeccion"] = new ActividadCollection();
+                }
+
+                return (ActividadCollection)Session["miColeccion"];
             }
         }
 
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            //Cargar comentarios
+            //Cargar();
+            if (!IsPostBack)
+            {
+                this.Llenarddl();
+            }
+        }
 
-        public void Cargar()
+        private void Llenarddl()
+        {
+            foreach (var tempSitio in Sitios)
+            {
+                ListItem item = new ListItem(string.Format("{0}", tempSitio.Nombre));
+                ddlLugares.Items.Add(item);
+            }
+        }
+
+        /*public void Cargar()
         {
             ActividadCollection coleccion = new ActividadCollection();
             coleccion = (ActividadCollection)Session["miColeccion"];
@@ -59,12 +78,54 @@ namespace AplicacionASP
 
                 lblPromedio.Text = string.Format("{0}", promedio);
             }
-        }
+        }*/
 
+        //Cambiar comentarios según item seleccionado
         protected void ddlLugares_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Cambiar items de atracciones según lugar
-            
+            lbResumen.Items.Clear();
+
+            //Crear colecciones una con la de session y la otra filtrada
+            ActividadCollection localColeccion = new ActividadCollection();
+            string direccion = string.Empty;
+            string gratis = string.Empty;
+
+            double promedio = 0;
+            if (Actividades != null)
+            {
+                foreach (var tempAct in Actividades)
+                {
+                    if (tempAct.Lugar.Nombre.Equals(ddlLugares.Text))
+                    {
+                        localColeccion.Add(tempAct);
+                        direccion = tempAct.Lugar.Direccion;
+                        gratis = tempAct.Lugar.EsGratis.ToString();
+                        promedio = promedio + tempAct.Nota.Total;
+
+                    }
+                }
+
+                //Mostrar datos de haberlos
+                if (promedio >= 1)
+                {
+                    //Entregar información del lugar
+                    lblDireccion.Text = direccion;
+                    lblGratis.Text = gratis;
+
+                    //Cantidad comentarios
+                    lblCantComentarios.Text = string.Format("{0}", localColeccion.Count);
+
+                    //Prm de nota general
+                    promedio = Math.Round((promedio / localColeccion.Count), 1);
+
+                    lblPromedio.Text = string.Format("{0}", promedio);
+
+                    //Cargar comentarios filtrados
+                    lbResumen.Items.Clear();
+                    lbResumen.DataSource = localColeccion;
+                    lbResumen.DataBind();
+                }
+            }
         }
     }
 }
