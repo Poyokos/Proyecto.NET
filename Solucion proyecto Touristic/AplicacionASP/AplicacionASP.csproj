@@ -84,7 +84,6 @@
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Lugares.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -122,13 +121,6 @@
     </Compile>
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Lugares.aspx.cs">
-      <DependentUpon>Lugares.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Lugares.aspx.designer.cs">
-      <DependentUpon>Lugares.aspx</DependentUpon>
     </Compile>
     <Compile Include="NuevoLugar.aspx.cs">
       <DependentUpon>NuevoLugar.aspx</DependentUpon>

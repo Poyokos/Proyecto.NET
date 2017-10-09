@@ -22,6 +22,15 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
         
         /// <summary>
+        /// Control rfvNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNombre;
+        
+        /// <summary>
         /// Control hEntrada.
         /// </summary>
         /// <remarks>
@@ -40,13 +49,22 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.TextBox mEntrada;
         
         /// <summary>
-        /// Control ddApertura.
+        /// Control rfvHraApertura.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddApertura;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvHraApertura;
+        
+        /// <summary>
+        /// Control rvApertura.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvApertura;
         
         /// <summary>
         /// Control txtDireccion.
@@ -56,6 +74,15 @@ namespace AplicacionASP {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDireccion;
+        
+        /// <summary>
+        /// Control rfvDireccion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDireccion;
         
         /// <summary>
         /// Control hSalida.
@@ -76,13 +103,22 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.TextBox mSalida;
         
         /// <summary>
-        /// Control ddClausura.
+        /// Control rfvHraCierre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddClausura;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvHraCierre;
+        
+        /// <summary>
+        /// Control rvCierre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvCierre;
         
         /// <summary>
         /// Control rbSi.
@@ -119,5 +155,14 @@ namespace AplicacionASP {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAgregar;
+        
+        /// <summary>
+        /// Control ValidationSummary1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
     }
 }

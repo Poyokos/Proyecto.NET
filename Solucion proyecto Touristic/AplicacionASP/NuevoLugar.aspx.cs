@@ -30,17 +30,7 @@ namespace AplicacionASP
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                CargarDDl();
-            }
-        }
-        private void CargarDDl()
-        {
-            ddApertura.Items.Add("AM");
-            ddApertura.Items.Add("PM");
-            ddClausura.Items.Add("AM");
-            ddClausura.Items.Add("PM");
+
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
@@ -54,8 +44,21 @@ namespace AplicacionASP
 
             sitio.Nombre = txtNombre.Text;
             sitio.Direccion = txtDireccion.Text;
-            sitio.Entrada = TimeSpan.Parse(string.Format("{0}:{1}", hEntrada.Text, mEntrada.Text));
-            sitio.Salida = TimeSpan.Parse(string.Format("{0}:{1}", hSalida.Text, mSalida.Text));
+
+            //Validar si los minutos estan en blanco dejarlos en 0
+            string minOpen = "00";
+            string minClose = "00";
+            if (mEntrada.Text != string.Empty)
+            {
+                minOpen = mEntrada.Text;
+            }
+            if (mSalida.Text != string.Empty)
+            {
+                minClose = mSalida.Text;
+            }
+
+            sitio.Entrada = TimeSpan.Parse(string.Format("{0}:{1}", hEntrada.Text, minOpen));
+            sitio.Salida = TimeSpan.Parse(string.Format("{0}:{1}", hSalida.Text, minClose));
             if (rbSi.Checked)
             {
                 sitio.EsGratis = Gratuito.Si;
@@ -67,6 +70,21 @@ namespace AplicacionASP
             //sitio.Atracciones = new List<Atraccion>();
 
             Sitios.Add(sitio);
+
+            //Vaciar controles
+            this.Limpieza();
+        }
+
+        private void Limpieza()
+        {
+            txtNombre.Text = string.Empty;
+            txtDireccion.Text = string.Empty;
+            hEntrada.Text = string.Empty;
+            hSalida.Text = string.Empty;
+            mEntrada.Text = string.Empty;
+            mSalida.Text = string.Empty;
+            rbSi.Checked = true;
+            
         }
     }
 }
