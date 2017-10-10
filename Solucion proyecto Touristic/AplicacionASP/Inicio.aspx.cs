@@ -39,10 +39,10 @@ namespace AplicacionASP
         protected void Page_Load(object sender, EventArgs e)
         {
             //Cargar comentarios
-            //Cargar();
             if (!IsPostBack)
             {
                 this.Llenarddl();
+                Cargar();
             }
         }
 
@@ -55,7 +55,7 @@ namespace AplicacionASP
             }
         }
 
-        /*public void Cargar()
+        public void Cargar()
         {
             ActividadCollection coleccion = new ActividadCollection();
             coleccion = (ActividadCollection)Session["miColeccion"];
@@ -78,7 +78,7 @@ namespace AplicacionASP
 
                 lblPromedio.Text = string.Format("{0}", promedio);
             }
-        }*/
+        }
 
         //Cambiar comentarios según item seleccionado
         protected void ddlLugares_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,7 +95,7 @@ namespace AplicacionASP
             {
                 foreach (var tempAct in Actividades)
                 {
-                    if (tempAct.Lugar.Nombre.Equals(ddlLugares.Text))
+                    if (tempAct.Lugar.Nombre.Equals(ddlLugares.SelectedValue))
                     {
                         localColeccion.Add(tempAct);
                         direccion = tempAct.Lugar.Direccion;

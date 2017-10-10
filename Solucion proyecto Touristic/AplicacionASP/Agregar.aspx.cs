@@ -57,9 +57,10 @@ namespace AplicacionASP
 
         private void cargarDdl()
         {
+            ListItem item;
             foreach (var tempSitio in Sitios)
             {
-                ListItem item = new ListItem(string.Format("{0}", tempSitio.Nombre));
+                item = new ListItem(string.Format("{0}", tempSitio.Nombre));
                 ddlLugares.Items.Add(item);
             }
         }
