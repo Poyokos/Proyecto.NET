@@ -12,7 +12,8 @@ namespace Touristic
         public string Direccion { get; set; }
         public TimeSpan Entrada { get; set; }
         public TimeSpan Salida { get; set; }
-        public Gratuito EsGratis { get; set; }
+        public char EsGratis { get; set; }
+        public Exposicion TipoExposicion { get; set; }
         //public List<Atraccion> Atracciones { get; set; } Este no va
     }
 }

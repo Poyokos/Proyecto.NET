@@ -11,7 +11,7 @@ namespace Touristic
         public Turista Visitante { get; set; }
         public SitioTuristico Lugar { get; set; }
         public DateTime FechaDeCritica { get; set; }
-        public Calificaciones Nota { get; set; }
+        public double Nota { get; set; }
         public string Observacion { get; set; }
         //public Atraccion Atracciones { get; set; }
 
@@ -32,7 +32,7 @@ namespace Touristic
                 Visitante.Nombre,
                 Visitante.Nacionalidad,
                 Observacion,
-                Nota.Total);
+                Nota);
         }
     }
 }

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Touristic
 {
-    public enum Gratuito
+    public enum Exposicion
     {
-        Si, No
+        Interior, Exterior, Ambos
     }
 }

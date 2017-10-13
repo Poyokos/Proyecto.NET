@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Touristic.Actividad">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAEAAAAAAAAAAAAQAAAAACCEAAAAAI=</HashCode>
+      <FileName>Actividad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Touristic.ActividadCollection" Collapsed="true">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ActividadCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Touristic.Atraccion">
+    <Position X="4" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Atraccion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Touristic.SitioCollection" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SitioCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Touristic.SitioTuristico">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAACAAKAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SitioTuristico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Touristic.Turista">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAgCAAAAAAAgAAAAACAAAAAAA=</HashCode>
+      <FileName>Turista.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Touristic.Exposicion">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAACAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Exposicion.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
