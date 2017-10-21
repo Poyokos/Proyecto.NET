@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{55D6680D-5B53-4E8A-86B8-422A1E71EAED}</ProjectGuid>
+    <ProjectGuid>{AF013142-8D25-4BFF-A3A5-FA0790A3F513}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Touristic</RootNamespace>
-    <AssemblyName>Touristic</AssemblyName>
+    <RootNamespace>Touristic.DALC</RootNamespace>
+    <AssemblyName>Touristic.DALC</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -37,6 +37,8 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,26 +47,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actividad.cs" />
-    <Compile Include="ActividadCollection.cs" />
-    <Compile Include="Atraccion.cs" />
-    <Compile Include="CommonBC.cs" />
-    <Compile Include="Exposicion.cs" />
-    <Compile Include="SitioCollection.cs" />
-    <Compile Include="SitioTuristico.cs" />
-    <Compile Include="Turista.cs" />
+    <Compile Include="actividad.cs">
+      <DependentUpon>TouristicEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="exposicion.cs">
+      <DependentUpon>TouristicEDM.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sitio.cs">
+      <DependentUpon>TouristicEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TouristicEDM.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TouristicEDM.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TouristicEDM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TouristicEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TouristicEDM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TouristicEDM.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="turista.cs">
+      <DependentUpon>TouristicEDM.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
+    <EntityDeploy Include="TouristicEDM.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TouristicEDM.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
     <None Include="packages.config" />
+    <None Include="TouristicEDM.edmx.diagram">
+      <DependentUpon>TouristicEDM.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Touristic.DALC\Touristic.DALC.csproj">
-      <Project>{af013142-8d25-4bff-a3a5-fa0790a3f513}</Project>
-      <Name>Touristic.DALC</Name>
-    </ProjectReference>
+    <Content Include="TouristicEDM.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TouristicEDM.Context.cs</LastGenOutput>
+      <DependentUpon>TouristicEDM.edmx</DependentUpon>
+    </Content>
+    <Content Include="TouristicEDM.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TouristicEDM.edmx</DependentUpon>
+      <LastGenOutput>TouristicEDM.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
