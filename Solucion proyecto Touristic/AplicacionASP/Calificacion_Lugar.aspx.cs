@@ -10,15 +10,15 @@ namespace AplicacionASP
 {
     public partial class Calificacion_Lugar : System.Web.UI.Page
     {
-        public Calificaciones Calif
+        public Double Calif
         {
             get
             {
                 if (Session["_Calif"] == null)
                 {
-                    Session["_Calif"] = new Calificaciones();
+                    Session["_Calif"] = new Double();
                 }
-                return (Calificaciones)Session["_Calif"];
+                return (Double)Session["_Calif"];
             }
             set
             {
@@ -41,7 +41,7 @@ namespace AplicacionASP
             if (!Validar())
             {
                 Crear();
-                Session["puntaje"] = Calif.Total;
+                Session["puntaje"] = Calif;
                 Server.Transfer("Agregar.aspx");
             }
         }
@@ -100,11 +100,7 @@ namespace AplicacionASP
 
         public void Crear()
         {
-            Calificaciones calif = new Calificaciones();
-            calif.Atractivo = Atractivo();
-            calif.Autenticidad = Autenticidad();
-            calif.Singularidad = Singularidad();
-            calif.Mult_actividades = Mult_Actividades();
+            Double calif = new Double();
             Calif = calif;
         }
 
@@ -158,8 +154,7 @@ namespace AplicacionASP
         protected void optAt1_CheckedChanged(object sender, EventArgs e)
         {
             Crear();
-            txtTotal.Text = string.Format("{0}", Calif.Total);
-            
+            txtTotal.Text = string.Format("{0}", Calif);
         }
     }
 }

@@ -52,7 +52,10 @@
                 <td class="auto-style2">(El horario debe ser ingresado en formato 24 hrs).</td>
             </tr>
             <tr>
-                <td class="auto-style1">&nbsp;</td>
+                <td class="auto-style1">- Exposición:
+                    <asp:DropDownList ID="ddlExposicion" runat="server">
+                    </asp:DropDownList>
+                </td>
                 <td class="auto-style2">&nbsp;</td>
             </tr>
             <tr>
@@ -62,7 +65,9 @@
                         <asp:Button ID="btnAgregar" runat="server" Text="Agregar" OnClick="btnAgregar_Click" />
                     &nbsp;
                     </td>
-                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style2">
+                    <asp:Label ID="lblNotificacion" runat="server"></asp:Label>
+                </td>
             </tr>
         </table>
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" />

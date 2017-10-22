@@ -47,7 +47,6 @@
   <ItemGroup>
     <Compile Include="Actividad.cs" />
     <Compile Include="ActividadCollection.cs" />
-    <Compile Include="Atraccion.cs" />
     <Compile Include="CommonBC.cs" />
     <Compile Include="Exposicion.cs" />
     <Compile Include="SitioCollection.cs" />
@@ -57,7 +56,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

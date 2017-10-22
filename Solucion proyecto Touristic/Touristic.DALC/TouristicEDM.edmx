@@ -4,12 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TouristicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TouristicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="actividad">
           <Key>
             <PropertyRef Name="idactividad" />
           </Key>
-          <Property Name="idactividad" Type="int" Nullable="false" />
+          <Property Name="idactividad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="sitio_idsitio" Type="int" Nullable="false" />
           <Property Name="fechadecritica" Type="date" Nullable="false" />
           <Property Name="observacion" Type="varchar" MaxLength="250" Nullable="false" />
@@ -26,7 +26,7 @@
           <Key>
             <PropertyRef Name="idsitio" />
           </Key>
-          <Property Name="idsitio" Type="int" Nullable="false" />
+          <Property Name="idsitio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="25" Nullable="false" />
           <Property Name="direccion" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="entrada" Type="time" Precision="7" Nullable="false" />
@@ -97,8 +97,7 @@
             <End Role="sitio" EntitySet="sitio" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TouristicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

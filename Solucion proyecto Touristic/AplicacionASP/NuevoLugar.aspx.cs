@@ -10,32 +10,20 @@ namespace AplicacionASP
 {
     public partial class NuevoLugar : System.Web.UI.Page
     {
-        //Campo con lugares en agregados sesión
-        public SitioCollection Sitios
-        {
-            get
-            {
-                if (Session["lugares"] == null)
-                {
-                    Session["lugares"] = new SitioCollection();
-                }
-
-                return (SitioCollection)Session["lugares"];
-            }
-            set
-            {
-                Session["lugares"] = value;
-            }
-        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                ddlExposicion.Items.Clear();
+                ddlExposicion.DataSource = Enum.GetValues(typeof(Exposicion));
+                ddlExposicion.DataBind();
+            }
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
-            Server.Transfer("Agregar.aspx");
+            Server.Transfer("Inicio.aspx");
         }
 
         protected void btnAgregar_Click(object sender, EventArgs e)
@@ -61,15 +49,22 @@ namespace AplicacionASP
             sitio.Salida = TimeSpan.Parse(string.Format("{0}:{1}", hSalida.Text, minClose));
             if (rbSi.Checked)
             {
-                sitio.EsGratis = Gratuito.Si;
+                sitio.EsGratis = 'S';
             }
             else
             {
-                sitio.EsGratis = Gratuito.No;
+                sitio.EsGratis = 'N';
             }
-            //sitio.Atracciones = new List<Atraccion>();
+            sitio.TipoExposicion = (Exposicion)ddlExposicion.SelectedIndex;
 
-            Sitios.Add(sitio);
+            if (sitio.Create())
+            {
+                lblNotificacion.Text = string.Format("¡Se agregó correctamente: {0}!", txtNombre);
+            }
+            else
+            {
+                lblNotificacion.Text = string.Format("¡No se pudo agregar: {0}!", txtNombre);
+            }
 
             //Vaciar controles
             this.Limpieza();

@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="TouristicModel.actividad" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="TouristicModel.exposicion" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="TouristicModel.sitio" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="TouristicModel.turista" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristicModel.turista" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
         <AssociationConnector Association="TouristicModel.actividad_sitio_fk" ManuallyRouted="false" />
         <AssociationConnector Association="TouristicModel.actividad_turista_fk" ManuallyRouted="false" />
         <AssociationConnector Association="TouristicModel.sitio_exposicion_fk" ManuallyRouted="false" />
