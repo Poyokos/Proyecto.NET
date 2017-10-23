@@ -28,7 +28,7 @@ namespace AplicacionASP
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
@@ -100,8 +100,8 @@ namespace AplicacionASP
 
         public void Crear()
         {
-            Double calif = new Double();
-            Calif = calif;
+            Double calif = Atractivo() + Autenticidad() + Singularidad() + Mult_Actividades();
+            Calif = Math.Round((calif / 4), 1);
         }
 
         public bool Validar()

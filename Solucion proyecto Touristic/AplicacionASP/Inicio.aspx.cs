@@ -38,11 +38,9 @@ namespace AplicacionASP
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Cargar comentarios
             if (!IsPostBack)
             {
                 this.Llenarddl();
-                Cargar();
             }
         }
 
@@ -52,31 +50,6 @@ namespace AplicacionASP
             {
                 ListItem item = new ListItem(string.Format("{0}", tempSitio.Nombre));
                 ddlLugares.Items.Add(item);
-            }
-        }
-
-        public void Cargar()
-        {
-            ActividadCollection coleccion = new ActividadCollection();
-            coleccion = (ActividadCollection)Session["miColeccion"];
-
-            double promedio = 0;
-            if (coleccion != null)
-            {
-                //Cargar listBox con comentarios
-                lbResumen.DataSource = coleccion.LeerTodos();
-                lbResumen.DataBind();
-
-                lblCantComentarios.Text = string.Format("{0}",coleccion.LeerTodos().Count);
-
-                foreach (Actividad tmpact in coleccion.LeerTodos())
-                {
-                    promedio = promedio + tmpact.Nota;
-                }
-
-                promedio = Math.Round((promedio / coleccion.LeerTodos().Count), 1);
-
-                lblPromedio.Text = string.Format("{0}", promedio);
             }
         }
 
@@ -106,11 +79,17 @@ namespace AplicacionASP
                 }
 
                 //Mostrar datos de haberlos
-                if (promedio >= 1)
+                if (localColeccion.Count >= 0)
                 {
                     //Entregar información del lugar
                     lblDireccion.Text = direccion;
-                    lblGratis.Text = gratis;
+                    if (gratis.ToLower() == "S")
+                    {
+                        lblGratis.Text = "¡Sí!  =D";
+                    } else
+                    {
+                        lblGratis.Text = "¡No! :c";
+                    }
 
                     //Cantidad comentarios
                     lblCantComentarios.Text = string.Format("{0}", localColeccion.Count);

@@ -22,7 +22,20 @@ namespace Touristic
                 Actividad act = new Actividad();
 
                 act.idActividad = registro.idactividad;
-                //
+
+                //Crear objetos para ingresarlos como instancias
+                Turista t = new Turista();
+                t.Ndocumento = registro.turista_documento;
+                t.Read();
+                SitioTuristico s = new SitioTuristico();
+                s.IdSitio = registro.sitio_idsitio;
+                s.Read();
+
+                act.Visitante = t;
+                act.Lugar = s;
+                act.FechaDeCritica = registro.fechadecritica;
+                act.Nota = (double)registro.nota;
+                act.Observacion = registro.observacion;
 
                 listaON.Add(act);
             }

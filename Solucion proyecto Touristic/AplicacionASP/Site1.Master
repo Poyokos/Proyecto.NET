@@ -12,11 +12,11 @@
 <body>
     <form id="form1" runat="server">
         <asp:Panel ID="Panel1" runat="server">
+            <h2>Touristic Value</h2>
+            <br />
             <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1">
             </asp:Menu>
             <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
-            <br />
-            <br />
             <br />
             <asp:SiteMapPath ID="SiteMapPath1" runat="server">
             </asp:SiteMapPath>
