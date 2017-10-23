@@ -35,7 +35,7 @@ namespace Touristic
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 CommonBC.BaseDeDatos.sitio.Remove(sitio);
                 return false;
@@ -58,7 +58,7 @@ namespace Touristic
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }

@@ -85,10 +85,10 @@ namespace AplicacionASP
                     lblDireccion.Text = direccion;
                     if (gratis.ToLower() == "S")
                     {
-                        lblGratis.Text = "¡Sí!  =D";
+                        lblGratis.Text = "¡Sí!";
                     } else
                     {
-                        lblGratis.Text = "¡No! :c";
+                        lblGratis.Text = "¡No!";
                     }
 
                     //Cantidad comentarios

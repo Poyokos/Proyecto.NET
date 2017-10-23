@@ -54,18 +54,17 @@ namespace Touristic
         {
             try
             {
-                //Traer el primer dato que mi id sea igual al del objeto
+                //Traer el primer dato que el documento sea igual al del objeto
                 DALC.turista visitante = CommonBC.BaseDeDatos.turista.First(turista => turista.documento == Ndocumento);
 
                 //Actualizar con objeto traido
                 Nombre = visitante.nombre;
                 Edad = visitante.edad;
-                Ndocumento = visitante.documento;
                 Nacionalidad = visitante.nacionalidad;
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }

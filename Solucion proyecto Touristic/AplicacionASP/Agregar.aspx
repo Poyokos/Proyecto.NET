@@ -10,26 +10,26 @@
     <asp:Panel ID="Panel1" runat="server">
     <table style="width:100%;">
         <tr>
-            <td class="auto-style1">Lugar</td>
+            <td class="auto-style1">- Lugar:</td>
             <td>
                 <asp:DropDownList ID="ddlLugares" runat="server">
                 </asp:DropDownList>
-                &nbsp;<asp:RequiredFieldValidator ID="rfvLugar" runat="server" ControlToValidate="ddlLugares" ErrorMessage="Debe ingresar un lugar">(*) Obligatorio</asp:RequiredFieldValidator>
+                &nbsp;<asp:RequiredFieldValidator ID="rfvLugar" runat="server" ControlToValidate="ddlLugares" ErrorMessage="Debe ingresar un lugar" ForeColor="Red">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
-            <td class="auto-style1">Nota</td>
+            <td class="auto-style1">- Nota:</td>
             <td>
                 <asp:TextBox ID="txtNota" runat="server" ReadOnly="True" Width="33px"></asp:TextBox>
                 &nbsp;<asp:Button ID="btnNota" runat="server" Text="Puntuar" OnClick="btnNota_Click" CausesValidation="False" />
-                &nbsp;<asp:RequiredFieldValidator ID="rfvPuntos" runat="server" ControlToValidate="txtNota" ErrorMessage="Se requiere una puntuacion">(*) Obligatorio</asp:RequiredFieldValidator>
+                &nbsp;<asp:RequiredFieldValidator ID="rfvPuntos" runat="server" ControlToValidate="txtNota" ErrorMessage="Se requiere una puntuación" ForeColor="Red">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
-            <td class="auto-style1">Observacion</td>
+            <td class="auto-style1">- Observacion:</td>
             <td aria-atomic="True">
-                <asp:TextBox ID="txtObservacion" runat="server" Rows="3" TextMode="MultiLine"></asp:TextBox>
-                &nbsp;<asp:RequiredFieldValidator ID="rfvObservacion" runat="server" ControlToValidate="txtObservacion" ErrorMessage="Tiene que dejar una observacion del lugar">(*) Obligatorio</asp:RequiredFieldValidator>
+                <asp:TextBox ID="txtObservacion" runat="server" Rows="3" TextMode="MultiLine" Height="80px" Width="235px"></asp:TextBox>
+                &nbsp;<asp:RequiredFieldValidator ID="rfvObservacion" runat="server" ControlToValidate="txtObservacion" ErrorMessage="Debe que dejar una observacion del lugar" ForeColor="Red">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>

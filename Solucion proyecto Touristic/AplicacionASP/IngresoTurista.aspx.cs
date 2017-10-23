@@ -18,20 +18,28 @@ namespace AplicacionASP
         protected void btnAgregar_Click(object sender, EventArgs e)
         {          
             Turista turis = new Turista();
-
-            turis.Nombre = txtNombre.Text;
-            turis.Edad = int.Parse(txtEdad.Text);
-            turis.Nacionalidad = txtNacionalidad.Text;
             turis.Ndocumento = txtDocumento.Text;
 
-            if (turis.Create())
+            if (turis.Read())
             {
                 Session["miTurista"] = turis;
                 Server.Transfer("Agregar.aspx");
             }
             else
             {
-                lblNotificacion.Text = "¡Ocurrió un error! ¡Vuelva a intentarlo!";
+                turis.Nombre = txtNombre.Text;
+                turis.Edad = int.Parse(txtEdad.Text);
+                turis.Nacionalidad = txtNacionalidad.Text;
+
+                if (turis.Create())
+                {
+                    Session["miTurista"] = turis;
+                    Server.Transfer("Agregar.aspx");
+                }
+                else
+                {
+                    lblNotificacion.Text = "¡Ocurrió un error! ¡Vuelva a intentarlo!";
+                }
             }
         }
 

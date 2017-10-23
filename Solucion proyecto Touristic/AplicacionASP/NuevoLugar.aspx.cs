@@ -59,7 +59,7 @@ namespace AplicacionASP
 
             if (sitio.Create())
             {
-                lblNotificacion.Text = string.Format("¡Se agregó correctamente: {0}!", txtNombre);
+                lblNotificacion.Text = string.Format("¡Se agregó correctamente: {0}!", sitio.Nombre);
             }
             else
             {

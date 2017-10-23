@@ -46,10 +46,10 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style1">- Gratuito: <asp:RadioButton ID="rbSi" runat="server" Text="Si" Checked="True" GroupName="Gratis" />
+                <td class="auto-style3">- Gratuito: <asp:RadioButton ID="rbSi" runat="server" Text="Si" Checked="True" GroupName="Gratis" />
                     <asp:RadioButton ID="rbNo" runat="server" Text="No" GroupName="Gratis" />
                 </td>
-                <td class="auto-style2">(El horario debe ser ingresado en formato 24 hrs).</td>
+                <td class="auto-style4">(El horario debe ser ingresado en formato 24 hrs).</td>
             </tr>
             <tr>
                 <td class="auto-style1">- Exposición:

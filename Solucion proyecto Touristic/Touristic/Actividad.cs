@@ -28,7 +28,7 @@ namespace Touristic
         //Entregar información de actividad
         public override string ToString()
         {
-            return string.Format("Visitante: {0} Pais: {1} Comentario: {2} Nota: {3}",
+            return string.Format("Visitante: {0} Nacionalidad: {1} Comentario: {2} Nota: {3}",
                 Visitante.Nombre,
                 Visitante.Nacionalidad,
                 Observacion,
@@ -52,7 +52,7 @@ namespace Touristic
                 CommonBC.BaseDeDatos.SaveChanges();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 CommonBC.BaseDeDatos.actividad.Remove(act);
                 return false;
