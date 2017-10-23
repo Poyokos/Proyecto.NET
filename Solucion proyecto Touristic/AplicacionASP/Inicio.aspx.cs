@@ -48,7 +48,7 @@ namespace AplicacionASP
 
         private void Llenarddl()
         {
-            foreach (var tempSitio in Sitios)
+            foreach (var tempSitio in Sitios.LeerTodos())
             {
                 ListItem item = new ListItem(string.Format("{0}", tempSitio.Nombre));
                 ddlLugares.Items.Add(item);
@@ -64,17 +64,17 @@ namespace AplicacionASP
             if (coleccion != null)
             {
                 //Cargar listBox con comentarios
-                lbResumen.DataSource = coleccion;
+                lbResumen.DataSource = coleccion.LeerTodos();
                 lbResumen.DataBind();
 
-                lblCantComentarios.Text = string.Format("{0}",coleccion.Count);
+                lblCantComentarios.Text = string.Format("{0}",coleccion.LeerTodos().Count);
 
-                foreach (Actividad tmpact in coleccion)
+                foreach (Actividad tmpact in coleccion.LeerTodos())
                 {
-                    promedio = promedio + tmpact.Nota.Total;
+                    promedio = promedio + tmpact.Nota;
                 }
 
-                promedio = Math.Round((promedio / coleccion.Count),1);
+                promedio = Math.Round((promedio / coleccion.LeerTodos().Count), 1);
 
                 lblPromedio.Text = string.Format("{0}", promedio);
             }
@@ -86,21 +86,21 @@ namespace AplicacionASP
             lbResumen.Items.Clear();
 
             //Crear colecciones una con la de session y la otra filtrada
-            ActividadCollection localColeccion = new ActividadCollection();
+            List<Actividad> localColeccion = new List<Actividad>();
             string direccion = string.Empty;
             string gratis = string.Empty;
 
             double promedio = 0;
             if (Actividades != null)
             {
-                foreach (var tempAct in Actividades)
+                foreach (var tempAct in Actividades.LeerTodos())
                 {
                     if (tempAct.Lugar.Nombre.Equals(ddlLugares.SelectedValue))
                     {
                         localColeccion.Add(tempAct);
                         direccion = tempAct.Lugar.Direccion;
                         gratis = tempAct.Lugar.EsGratis.ToString();
-                        promedio = promedio + tempAct.Nota.Total;
+                        promedio = promedio + tempAct.Nota;
 
                     }
                 }

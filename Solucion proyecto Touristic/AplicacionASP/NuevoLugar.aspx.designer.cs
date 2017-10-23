@@ -139,6 +139,15 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.RadioButton rbNo;
         
         /// <summary>
+        /// Control ddlExposicion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlExposicion;
+        
+        /// <summary>
         /// Control btnCancelar.
         /// </summary>
         /// <remarks>
@@ -155,6 +164,15 @@ namespace AplicacionASP {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAgregar;
+        
+        /// <summary>
+        /// Control lblNotificacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNotificacion;
         
         /// <summary>
         /// Control ValidationSummary1.

@@ -31,7 +31,7 @@ namespace AplicacionASP
         {
             if (!IsPostBack)
             {
-                foreach (var tempSitio in Sitios)
+                foreach (var tempSitio in Sitios.LeerTodos())
                 {
                     ListItem item = new ListItem(string.Format("{0}", tempSitio.Nombre));
                     ddlLugares.Items.Add(item);

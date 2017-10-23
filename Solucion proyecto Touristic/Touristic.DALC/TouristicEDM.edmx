@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TouristicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="actividad">
+          <Key>
+            <PropertyRef Name="idactividad" />
+          </Key>
+          <Property Name="idactividad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sitio_idsitio" Type="int" Nullable="false" />
+          <Property Name="fechadecritica" Type="date" Nullable="false" />
+          <Property Name="observacion" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="turista_documento" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="nota" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="exposicion">
+          <Key>
+            <PropertyRef Name="tipo" />
+          </Key>
+          <Property Name="tipo" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sitio">
+          <Key>
+            <PropertyRef Name="idsitio" />
+          </Key>
+          <Property Name="idsitio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="direccion" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="entrada" Type="time" Precision="7" Nullable="false" />
+          <Property Name="salida" Type="time" Precision="7" Nullable="false" />
+          <Property Name="gratuito" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="exposicion_tipo" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="turista">
+          <Key>
+            <PropertyRef Name="documento" />
+          </Key>
+          <Property Name="documento" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="edad" Type="int" Nullable="false" />
+          <Property Name="nacionalidad" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <Association Name="actividad_sitio_fk">
+          <End Role="sitio" Type="Self.sitio" Multiplicity="1" />
+          <End Role="actividad" Type="Self.actividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sitio">
+              <PropertyRef Name="idsitio" />
+            </Principal>
+            <Dependent Role="actividad">
+              <PropertyRef Name="sitio_idsitio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="actividad_turista_fk">
+          <End Role="turista" Type="Self.turista" Multiplicity="1" />
+          <End Role="actividad" Type="Self.actividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="turista">
+              <PropertyRef Name="documento" />
+            </Principal>
+            <Dependent Role="actividad">
+              <PropertyRef Name="turista_documento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sitio_exposicion_fk">
+          <End Role="exposicion" Type="Self.exposicion" Multiplicity="1" />
+          <End Role="sitio" Type="Self.sitio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="exposicion">
+              <PropertyRef Name="tipo" />
+            </Principal>
+            <Dependent Role="sitio">
+              <PropertyRef Name="exposicion_tipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TouristicModelStoreContainer">
+          <EntitySet Name="actividad" EntityType="Self.actividad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="exposicion" EntityType="Self.exposicion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sitio" EntityType="Self.sitio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="turista" EntityType="Self.turista" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="actividad_sitio_fk" Association="Self.actividad_sitio_fk">
+            <End Role="sitio" EntitySet="sitio" />
+            <End Role="actividad" EntitySet="actividad" />
+          </AssociationSet>
+          <AssociationSet Name="actividad_turista_fk" Association="Self.actividad_turista_fk">
+            <End Role="turista" EntitySet="turista" />
+            <End Role="actividad" EntitySet="actividad" />
+          </AssociationSet>
+          <AssociationSet Name="sitio_exposicion_fk" Association="Self.sitio_exposicion_fk">
+            <End Role="exposicion" EntitySet="exposicion" />
+            <End Role="sitio" EntitySet="sitio" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TouristicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="actividad">
+          <Key>
+            <PropertyRef Name="idactividad" />
+          </Key>
+          <Property Name="idactividad" Type="Int32" Nullable="false" />
+          <Property Name="sitio_idsitio" Type="Int32" Nullable="false" />
+          <Property Name="fechadecritica" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="observacion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="turista_documento" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nota" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <NavigationProperty Name="sitio" Relationship="Self.actividad_sitio_fk" FromRole="actividad" ToRole="sitio" />
+          <NavigationProperty Name="turista" Relationship="Self.actividad_turista_fk" FromRole="actividad" ToRole="turista" />
+        </EntityType>
+        <EntityType Name="exposicion">
+          <Key>
+            <PropertyRef Name="tipo" />
+          </Key>
+          <Property Name="tipo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="sitio" Relationship="Self.sitio_exposicion_fk" FromRole="exposicion" ToRole="sitio" />
+        </EntityType>
+        <EntityType Name="sitio">
+          <Key>
+            <PropertyRef Name="idsitio" />
+          </Key>
+          <Property Name="idsitio" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="direccion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="entrada" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="salida" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="gratuito" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="exposicion_tipo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="actividad" Relationship="Self.actividad_sitio_fk" FromRole="sitio" ToRole="actividad" />
+          <NavigationProperty Name="exposicion" Relationship="Self.sitio_exposicion_fk" FromRole="sitio" ToRole="exposicion" />
+        </EntityType>
+        <EntityType Name="turista">
+          <Key>
+            <PropertyRef Name="documento" />
+          </Key>
+          <Property Name="documento" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="edad" Type="Int32" Nullable="false" />
+          <Property Name="nacionalidad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="actividad" Relationship="Self.actividad_turista_fk" FromRole="turista" ToRole="actividad" />
+        </EntityType>
+        <Association Name="actividad_sitio_fk">
+          <End Role="sitio" Type="Self.sitio" Multiplicity="1" />
+          <End Role="actividad" Type="Self.actividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sitio">
+              <PropertyRef Name="idsitio" />
+            </Principal>
+            <Dependent Role="actividad">
+              <PropertyRef Name="sitio_idsitio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="actividad_turista_fk">
+          <End Role="turista" Type="Self.turista" Multiplicity="1" />
+          <End Role="actividad" Type="Self.actividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="turista">
+              <PropertyRef Name="documento" />
+            </Principal>
+            <Dependent Role="actividad">
+              <PropertyRef Name="turista_documento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sitio_exposicion_fk">
+          <End Role="exposicion" Type="Self.exposicion" Multiplicity="1" />
+          <End Role="sitio" Type="Self.sitio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="exposicion">
+              <PropertyRef Name="tipo" />
+            </Principal>
+            <Dependent Role="sitio">
+              <PropertyRef Name="exposicion_tipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TouristicEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="actividad" EntityType="Self.actividad" />
+          <EntitySet Name="exposicion" EntityType="Self.exposicion" />
+          <EntitySet Name="sitio" EntityType="Self.sitio" />
+          <EntitySet Name="turista" EntityType="Self.turista" />
+          <AssociationSet Name="actividad_sitio_fk" Association="Self.actividad_sitio_fk">
+            <End Role="sitio" EntitySet="sitio" />
+            <End Role="actividad" EntitySet="actividad" />
+          </AssociationSet>
+          <AssociationSet Name="actividad_turista_fk" Association="Self.actividad_turista_fk">
+            <End Role="turista" EntitySet="turista" />
+            <End Role="actividad" EntitySet="actividad" />
+          </AssociationSet>
+          <AssociationSet Name="sitio_exposicion_fk" Association="Self.sitio_exposicion_fk">
+            <End Role="exposicion" EntitySet="exposicion" />
+            <End Role="sitio" EntitySet="sitio" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TouristicModelStoreContainer" CdmEntityContainer="TouristicEntities">
+          <EntitySetMapping Name="actividad">
+            <EntityTypeMapping TypeName="TouristicModel.actividad">
+              <MappingFragment StoreEntitySet="actividad">
+                <ScalarProperty Name="idactividad" ColumnName="idactividad" />
+                <ScalarProperty Name="sitio_idsitio" ColumnName="sitio_idsitio" />
+                <ScalarProperty Name="fechadecritica" ColumnName="fechadecritica" />
+                <ScalarProperty Name="observacion" ColumnName="observacion" />
+                <ScalarProperty Name="turista_documento" ColumnName="turista_documento" />
+                <ScalarProperty Name="nota" ColumnName="nota" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="exposicion">
+            <EntityTypeMapping TypeName="TouristicModel.exposicion">
+              <MappingFragment StoreEntitySet="exposicion">
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sitio">
+            <EntityTypeMapping TypeName="TouristicModel.sitio">
+              <MappingFragment StoreEntitySet="sitio">
+                <ScalarProperty Name="idsitio" ColumnName="idsitio" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="entrada" ColumnName="entrada" />
+                <ScalarProperty Name="salida" ColumnName="salida" />
+                <ScalarProperty Name="gratuito" ColumnName="gratuito" />
+                <ScalarProperty Name="exposicion_tipo" ColumnName="exposicion_tipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="turista">
+            <EntityTypeMapping TypeName="TouristicModel.turista">
+              <MappingFragment StoreEntitySet="turista">
+                <ScalarProperty Name="documento" ColumnName="documento" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="edad" ColumnName="edad" />
+                <ScalarProperty Name="nacionalidad" ColumnName="nacionalidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

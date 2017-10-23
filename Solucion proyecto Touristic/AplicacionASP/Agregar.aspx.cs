@@ -10,24 +10,6 @@ namespace AplicacionASP
 {
     public partial class Agregar : System.Web.UI.Page
     {
-        public ActividadCollection miColeccion
-        {
-            get
-            {
-                if (Session["miColeccion"] == null)
-                {
-                    Session["miColeccion"] = new ActividadCollection();
-                }
-
-                return (ActividadCollection)Session["miColeccion"];
-            }
-
-            set
-            {
-                Session["miColeccion"] = value;
-            }
-        }
-
         public SitioCollection Sitios
         {
             get
@@ -58,7 +40,7 @@ namespace AplicacionASP
         private void cargarDdl()
         {
             ListItem item;
-            foreach (var tempSitio in Sitios)
+            foreach (var tempSitio in Sitios.LeerTodos())
             {
                 item = new ListItem(string.Format("{0}", tempSitio.Nombre));
                 ddlLugares.Items.Add(item);
@@ -89,13 +71,22 @@ namespace AplicacionASP
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
             Actividad actividad = new Actividad();
-            actividad.Nota = (Calificaciones)Session["_Calif"];
+
+            actividad.Nota = (Double)Session["_Calif"];
             actividad.Visitante = (Turista)Session["miTurista"];
-            actividad.Lugar = (SitioTuristico)Sitios[ddlLugares.SelectedIndex];
+            actividad.Lugar = (SitioTuristico)Sitios.LeerTodos()[ddlLugares.SelectedIndex];
             actividad.Observacion = txtObservacion.Text;
-            miColeccion.Add(actividad);
-            Session["puntaje"] = null;
-            Server.Transfer("Inicio.aspx");
+
+
+            if (actividad.Create())
+            {
+                Session["puntaje"] = null;
+                Server.Transfer("Inicio.aspx");
+            }
+            else
+            {
+                lblNotificacion.Text = "¡Ocurrió un error! ¡Vuelva a intentarlo!";
+            }
         }
     }
 }

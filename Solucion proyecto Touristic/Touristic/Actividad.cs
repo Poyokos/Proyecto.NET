@@ -8,12 +8,12 @@ namespace Touristic
 {
     public class Actividad
     {
+        public int idActividad { get; set; }
         public Turista Visitante { get; set; }
         public SitioTuristico Lugar { get; set; }
         public DateTime FechaDeCritica { get; set; }
         public double Nota { get; set; }
         public string Observacion { get; set; }
-        //public Atraccion Atracciones { get; set; }
 
         public Actividad()
         {
@@ -33,6 +33,30 @@ namespace Touristic
                 Visitante.Nacionalidad,
                 Observacion,
                 Nota);
+        }
+
+        //CRUD - Herramientas para trabajar con la tabla Turista en db
+        public bool Create()
+        {
+            DALC.actividad act = new DALC.actividad();
+
+            try
+            {
+                act.fechadecritica = FechaDeCritica;
+                act.nota = Convert.ToDecimal(Nota);
+                act.observacion = Observacion;
+                act.turista = CommonBC.BaseDeDatos.turista.First(t => t.documento == Visitante.Ndocumento);
+                act.sitio = CommonBC.BaseDeDatos.sitio.First(s => s.idsitio == Lugar.IdSitio);
+
+                CommonBC.BaseDeDatos.actividad.Add(act);
+                CommonBC.BaseDeDatos.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                CommonBC.BaseDeDatos.actividad.Remove(act);
+                return false;
+            }
         }
     }
 }

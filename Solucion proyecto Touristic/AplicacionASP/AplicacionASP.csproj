@@ -69,7 +69,6 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Agregar.aspx" />
-    <Content Include="Atracciones.aspx" />
     <Content Include="Calificacion_Lugar.aspx" />
     <Content Include="IngresoTurista.aspx" />
     <Content Include="Inicio.aspx" />
@@ -93,13 +92,6 @@
     </Compile>
     <Compile Include="Agregar.aspx.designer.cs">
       <DependentUpon>Agregar.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Atracciones.aspx.cs">
-      <DependentUpon>Atracciones.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Atracciones.aspx.designer.cs">
-      <DependentUpon>Atracciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Calificacion_Lugar.aspx.cs">
       <DependentUpon>Calificacion_Lugar.aspx</DependentUpon>
