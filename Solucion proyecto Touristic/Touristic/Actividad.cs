@@ -14,6 +14,13 @@ namespace Touristic
         public DateTime FechaDeCritica { get; set; }
         public double Nota { get; set; }
         public string Observacion { get; set; }
+        public string NombreTurista
+        {
+            get
+            {
+                return Visitante.Nombre;
+            }
+        }
 
         public Actividad()
         {

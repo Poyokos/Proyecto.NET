@@ -5,10 +5,10 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="9fdc52a142294cacbeb89d4ac1556618" Name="Diagram1">
-        <EntityTypeShape EntityType="TouristicModel.actividad" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="TouristicModel.exposicion" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="TouristicModel.sitio" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="TouristicModel.turista" Width="1.5" PointX="7.875" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristicModel.actividad" Width="1.5" PointX="5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristicModel.exposicion" Width="1.5" PointX="0.5" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristicModel.sitio" Width="1.5" PointX="2.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristicModel.turista" Width="1.5" PointX="7.625" PointY="1.5" IsExpanded="true" />
         <AssociationConnector Association="TouristicModel.actividad_sitio_fk" ManuallyRouted="false" />
         <AssociationConnector Association="TouristicModel.actividad_turista_fk" ManuallyRouted="false" />
         <AssociationConnector Association="TouristicModel.sitio_exposicion_fk" ManuallyRouted="false" />

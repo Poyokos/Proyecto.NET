@@ -43,7 +43,7 @@ namespace Touristic
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 CommonBC.BaseDeDatos.turista.Remove(visitante);
                 return false;

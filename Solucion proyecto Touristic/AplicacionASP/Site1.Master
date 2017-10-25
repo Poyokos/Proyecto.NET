@@ -12,7 +12,7 @@
 <body>
     <form id="form1" runat="server">
         <asp:Panel ID="Panel1" runat="server">
-            <h2>Touristic Value</h2>
+            <h1>Touristic Value</h1>
             <br />
             <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1">
             </asp:Menu>

@@ -8,14 +8,22 @@ namespace Touristic
 {
     public class ActividadCollection
     {
+        public double SumaNota = 0;
+
         public List<Actividad> LeerTodos()
         {
             return GenerarLista(CommonBC.BaseDeDatos.actividad.ToList<DALC.actividad>());
         }
 
+        //Obetener una lista filtrada según el id del lugar ingresado
+        public List<Actividad> ListaPorLugar(int idSitio)
+        {
+            return GenerarLista(CommonBC.BaseDeDatos.actividad.Where(a => a.sitio_idsitio == idSitio).ToList<DALC.actividad>());
+        }
+
         private List<Actividad> GenerarLista(List<DALC.actividad> listaDALC)
         {
-            List<Actividad> listaON = new List<Actividad>();
+            List<Actividad> listaBC = new List<Actividad>();
 
             foreach (DALC.actividad registro in listaDALC)
             {
@@ -36,11 +44,12 @@ namespace Touristic
                 act.FechaDeCritica = registro.fechadecritica;
                 act.Nota = (double)registro.nota;
                 act.Observacion = registro.observacion;
+                SumaNota = SumaNota + act.Nota;
 
-                listaON.Add(act);
+                listaBC.Add(act);
             }
 
-            return listaON;
+            return listaBC;
         }
     }
 }

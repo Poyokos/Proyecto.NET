@@ -76,6 +76,7 @@ namespace AplicacionASP
             actividad.Visitante = (Turista)Session["miTurista"];
             actividad.Lugar = (SitioTuristico)Sitios.LeerTodos()[ddlLugares.SelectedIndex];
             actividad.Observacion = txtObservacion.Text;
+            actividad.FechaDeCritica = DateTime.Now;
 
 
             if (actividad.Create())
