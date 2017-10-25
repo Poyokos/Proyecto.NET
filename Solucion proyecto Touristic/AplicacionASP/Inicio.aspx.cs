@@ -52,13 +52,28 @@ namespace AplicacionASP
             //Carga el List View Resumen con todas las Actividades segun Sitio
             lvResumen.DataSource = lista.ListaPorLugar(idSitio);
             lvResumen.DataBind();
+            
             //Muestra el Promedio de notas de las Actividades segun Sitio
             double prm = Math.Round(lista.Promedio, 1);
             lblPromedio.Text = prm.ToString();
             //lblPromedio.Text = string.Format("{0}", lista.Promedio);
             //Muestra cantidad Total de Comentarios segung Sitio
             lblCantComentarios.Text = lvResumen.Items.Count.ToString();
+
+            if (lvResumen.Items.Count == 0)
+            {
+                dpPaginacion.Visible = false;
+            }
+            else
+            {
+                dpPaginacion.Visible = true;
+            }
         }
 
+        protected void lvResumen_PagePropertiesChanging(object sender, PagePropertiesChangingEventArgs e)
+        {
+            dpPaginacion.SetPageProperties(e.StartRowIndex, e.MaximumRows, false);
+            CargarInformacion();
+        }
     }
 }

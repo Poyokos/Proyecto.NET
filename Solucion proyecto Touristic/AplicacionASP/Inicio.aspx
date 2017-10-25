@@ -25,7 +25,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>- Comentarios:</b>&nbsp;
             <asp:Label ID="lblCantComentarios" runat="server"></asp:Label>
             <br />
-            <asp:ListView ID="lvResumen" runat="server">
+            <asp:ListView ID="lvResumen" runat="server" OnPagePropertiesChanging="lvResumen_PagePropertiesChanging">
                 <AlternatingItemTemplate>
                     <li style="background-color: #FFFFFF;color: #284775; list-style: none; border-radius: 1em; padding: 1em; border: 1px solid #A9D0F5">- Nombre:
                         <asp:Label ID="NombreTuristaLabel" runat="server" Text='<%# Eval("NombreTurista") %>' />
@@ -50,7 +50,8 @@
                     <br />
                 </ItemSeparatorTemplate>
                 <ItemTemplate>
-                    <li style="background-color: #A9D0F5;color: #333333; list-style: none; border-radius: 1em; padding: 1em;">- Nombre:
+                    <li style="background-color: #A9D0F5;color: #333333; list-style: none; border-radius: 1em; padding: 1em;">
+                        - Nombre:
                         <asp:Label ID="NombreTuristaLabel" runat="server" Text='<%# Eval("NombreTurista") %>' />
                         <br />
                         - Observación:
@@ -64,20 +65,9 @@
                         <br />
                     </li>
                 </ItemTemplate>
-                <LayoutTemplate>
-                    <ul id="itemPlaceholderContainer" runat="server" style="font-family: Verdana, Arial, Helvetica, sans-serif;">
-                        <li runat="server" id="itemPlaceholder" />
-                    </ul>
-                    <div style="text-align: center;background-color: #5D7B9D;font-family: Verdana, Arial, Helvetica, sans-serif;color: #FFFFFF;">
-                        <asp:DataPager ID="DataPager1" runat="server">
-                            <Fields>
-                                <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
-                                <asp:NumericPagerField />
-                                <asp:NextPreviousPagerField ButtonType="Button" ShowLastPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
-                            </Fields>
-                        </asp:DataPager>
-                    </div>
-                </LayoutTemplate>
+                
+
+
                 <SelectedItemTemplate>
                     <li style="background-color: #E2DED6;font-weight: bold;color: #333333;">
                         - Nombre:
@@ -95,6 +85,16 @@
                     </li>
                 </SelectedItemTemplate>
             </asp:ListView>
+            <br>
+            <div style="text-align: center;background-color: #5D7B9D;font-family: Verdana, Arial, Helvetica, sans-serif;color: #FFFFFF;">
+                <asp:DataPager ID="dpPaginacion" runat="server" PageSize="3" PagedControlID="lvResumen" >
+                    <Fields>
+                        <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
+                        <asp:NumericPagerField />
+                        <asp:NextPreviousPagerField ButtonType="Button" ShowLastPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
+                    </Fields>
+                </asp:DataPager>
+            </div>
             <br />
         </asp:Panel>
 </asp:Content>
