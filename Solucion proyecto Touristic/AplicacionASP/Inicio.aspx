@@ -27,11 +27,11 @@
             <br />
             <asp:ListView ID="lvResumen" runat="server">
                 <AlternatingItemTemplate>
-                    <li style="background-color: #FFFFFF;color: #284775;">- Nombre:
+                    <li style="background-color: #FFFFFF;color: #284775; list-style: none; border-radius: 1em; padding: 1em; border: 1px solid #A9D0F5">- Nombre:
                         <asp:Label ID="NombreTuristaLabel" runat="server" Text='<%# Eval("NombreTurista") %>' />
                         <br />
                         - Observacion:
-                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("Observacion") %>' Width="30em" />
+                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("Observacion") %>' />
                         <br />
                         - Nota:
                         <asp:Label ID="NotaLabel" runat="server" Text='<%# Eval("Nota") %>' />
@@ -42,17 +42,19 @@
                     </li>
                 </AlternatingItemTemplate>
                 <EmptyDataTemplate>
-                    No se han devuelto datos.
+                    <br>
+                    <br>
+                    <center><h2>No se han devuelto datos</h2> </center>
                 </EmptyDataTemplate>
                 <ItemSeparatorTemplate>
                     <br />
                 </ItemSeparatorTemplate>
                 <ItemTemplate>
-                    <li style="background-color: #E0FFFF;color: #333333;">- Nombre:
+                    <li style="background-color: #A9D0F5;color: #333333; list-style: none; border-radius: 1em; padding: 1em;">- Nombre:
                         <asp:Label ID="NombreTuristaLabel" runat="server" Text='<%# Eval("NombreTurista") %>' />
                         <br />
                         - Observacion:
-                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("Observacion") %>' Width="30em" />
+                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("Observacion") %>' />
                         <br />
                         - Nota:
                         <asp:Label ID="NotaLabel" runat="server" Text='<%# Eval("Nota") %>' />
