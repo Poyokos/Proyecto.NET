@@ -24,7 +24,7 @@ namespace AplicacionASP
         }
 
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {   
             if (Session["puntaje"] != null)
             {
                 double nota = (double)Session["puntaje"];
@@ -35,6 +35,15 @@ namespace AplicacionASP
             {
                 this.cargarDdl();
             }
+
+            //if (Session["sitioselect"] == null)
+            //{
+            //    Session["sitioselect"] = 0;
+            //}
+            //else
+            //{
+            //    ddlLugares.SelectedIndex = (int)Session["sitioselect"];
+            //}
         }
 
         private void cargarDdl()
@@ -60,11 +69,13 @@ namespace AplicacionASP
 
         protected void btnVolver_Click(object sender, EventArgs e)
         {
+            //Session["sitioselect"] = null;
             Server.Transfer("IngresoTurista.aspx");
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
+            //Session["sitioselect"] = null;
             Server.Transfer("Inicio.aspx");
         }
 
@@ -82,6 +93,7 @@ namespace AplicacionASP
             if (actividad.Create())
             {
                 Session["puntaje"] = null;
+                //Session["sitioselect"] = null;
                 Server.Transfer("Inicio.aspx");
             }
             else

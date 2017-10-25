@@ -8,8 +8,24 @@ namespace Touristic
 {
     public class ActividadCollection
     {
-        public double SumaNota = 0;
+        #region Atributos
+        private double _promedio = 0;
+        #endregion
 
+        #region Propiedades
+        public double Promedio {
+            get
+            {
+                return _promedio;
+            }
+            set
+            {
+                _promedio = value;
+            }
+        }
+        #endregion
+
+        #region Metodos
         public List<Actividad> LeerTodos()
         {
             return GenerarLista(CommonBC.BaseDeDatos.actividad.ToList<DALC.actividad>());
@@ -24,9 +40,10 @@ namespace Touristic
         private List<Actividad> GenerarLista(List<DALC.actividad> listaDALC)
         {
             List<Actividad> listaBC = new List<Actividad>();
-
+            double sumanota = 0;
             foreach (DALC.actividad registro in listaDALC)
             {
+                
                 Actividad act = new Actividad();
 
                 act.idActividad = registro.idactividad;
@@ -44,12 +61,13 @@ namespace Touristic
                 act.FechaDeCritica = registro.fechadecritica;
                 act.Nota = (double)registro.nota;
                 act.Observacion = registro.observacion;
-                SumaNota = SumaNota + act.Nota;
+                sumanota = sumanota + act.Nota;
 
                 listaBC.Add(act);
             }
-
+            Promedio = sumanota / listaBC.Count;
             return listaBC;
-        }
+        } 
+        #endregion
     }
 }

@@ -31,7 +31,7 @@
                         <asp:Label ID="NombreTuristaLabel" runat="server" Text='<%# Eval("NombreTurista") %>' />
                         <br />
                         - Observacion:
-                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("Observacion") %>' />
+                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("Observacion") %>' Width="30em" />
                         <br />
                         - Nota:
                         <asp:Label ID="NotaLabel" runat="server" Text='<%# Eval("Nota") %>' />
@@ -52,7 +52,7 @@
                         <asp:Label ID="NombreTuristaLabel" runat="server" Text='<%# Eval("NombreTurista") %>' />
                         <br />
                         - Observacion:
-                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("Observacion") %>' />
+                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("Observacion") %>' Width="30em" />
                         <br />
                         - Nota:
                         <asp:Label ID="NotaLabel" runat="server" Text='<%# Eval("Nota") %>' />
@@ -77,7 +77,8 @@
                     </div>
                 </LayoutTemplate>
                 <SelectedItemTemplate>
-                    <li style="background-color: #E2DED6;font-weight: bold;color: #333333;">- Nombre:
+                    <li style="background-color: #E2DED6;font-weight: bold;color: #333333;">
+                        - Nombre:
                         <asp:Label ID="NombreTuristaLabel" runat="server" Text='<%# Eval("NombreTurista") %>' />
                         <br />
                         - Observacion:
@@ -92,5 +93,6 @@
                     </li>
                 </SelectedItemTemplate>
             </asp:ListView>
+            <br />
         </asp:Panel>
 </asp:Content>
