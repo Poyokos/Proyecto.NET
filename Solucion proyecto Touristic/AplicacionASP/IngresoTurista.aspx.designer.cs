@@ -31,58 +31,22 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
         
         /// <summary>
-        /// Control rfvNom0.
+        /// Control rfvNom.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNom0;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNom;
         
         /// <summary>
-        /// Control valNombre0.
+        /// Control valNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator valNombre0;
-        
-        /// <summary>
-        /// Control txtEdad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEdad;
-        
-        /// <summary>
-        /// Control rfvEdad0.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEdad0;
-        
-        /// <summary>
-        /// Control cvEdad0.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator cvEdad0;
-        
-        /// <summary>
-        /// Control RangoEdad0.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangoEdad0;
+        protected global::System.Web.UI.WebControls.CompareValidator valNombre;
         
         /// <summary>
         /// Control txtDocumento.
@@ -94,22 +58,58 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.TextBox txtDocumento;
         
         /// <summary>
-        /// Control cvDoc0.
+        /// Control cvDoc.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator cvDoc0;
+        protected global::System.Web.UI.WebControls.CompareValidator cvDoc;
         
         /// <summary>
-        /// Control rfvDoc0.
+        /// Control rfvDoc.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDoc0;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDoc;
+        
+        /// <summary>
+        /// Control txtEdad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEdad;
+        
+        /// <summary>
+        /// Control rfvEdad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEdad;
+        
+        /// <summary>
+        /// Control cvEdad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cvEdad;
+        
+        /// <summary>
+        /// Control RangoEdad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangoEdad;
         
         /// <summary>
         /// Control txtNacionalidad.
@@ -121,31 +121,22 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.TextBox txtNacionalidad;
         
         /// <summary>
-        /// Control rfvNac1.
+        /// Control rfvNac.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNac1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNac;
         
         /// <summary>
-        /// Control valNaciona1.
+        /// Control valNaciona.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator valNaciona1;
-        
-        /// <summary>
-        /// Control lblNotificacion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNotificacion;
+        protected global::System.Web.UI.WebControls.CompareValidator valNaciona;
         
         /// <summary>
         /// Control btnCancelar.
@@ -173,5 +164,14 @@ namespace AplicacionASP {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        
+        /// <summary>
+        /// Control lblNotificacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNotificacion;
     }
 }
