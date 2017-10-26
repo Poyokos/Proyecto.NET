@@ -22,9 +22,10 @@ namespace AplicacionASP
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
+            
             bool agregar = (bool)Session["_agregar"];
             if (agregar)
-            {
+              {
                 Session["_agregar"] = false;
                 Server.Transfer("Agregar.aspx");
             }
