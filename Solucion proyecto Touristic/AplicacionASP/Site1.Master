@@ -12,14 +12,29 @@
 <body>
     <form id="form1" runat="server">
         <asp:Panel ID="Panel1" runat="server">
-            <h1>Touristic Value</h1>
+            <center><h1>Touristic Value</h1></center>
+            &nbsp;&nbsp;&nbsp;
+            <center>
+                <div id="dContent">
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#000000" DataSourceID="SiteMapDataSource1" DisappearAfter="100" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="X-Large" ForeColor="White" Orientation="Horizontal" StaticDisplayLevels="2" StaticSubMenuIndent="10px" RenderingMode="Table" StaticEnableDefaultPopOutImage="False" Height="52px" Width="530px">
+                        <DynamicHoverStyle BackColor="#084B8A" ForeColor="White" Font-Size="X-Large" Font-Strikeout="False" Width="210px" />
+                        <DynamicMenuItemStyle HorizontalPadding="12px" VerticalPadding="2px" Font-Size="X-Large" />
+                        <DynamicMenuStyle BackColor="#000000" Width="210px"/>
+                        <DynamicSelectedStyle BackColor="#0B3861" Width="210px" />
+                        <StaticHoverStyle BackColor="#084B8A" ForeColor="White" Height="52px" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" Font-Size="X-Large" />
+                        <StaticSelectedStyle BackColor="#0B3861" Height="52px" />
+                    </asp:Menu>
+                </div>
+            </center>
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+            <br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
             <asp:SiteMapPath ID="SiteMapPath1" runat="server">
             </asp:SiteMapPath>
             <br />
-            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
-            <br />
-            <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1">
-            </asp:Menu>
             <br />
             <br />
         </asp:Panel>
