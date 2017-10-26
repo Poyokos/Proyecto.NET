@@ -74,6 +74,7 @@
     <Content Include="Eliminar.aspx" />
     <Content Include="IngresoTurista.aspx" />
     <Content Include="Inicio.aspx" />
+    <Content Include="Modificar.aspx" />
     <Content Include="NuevoLugar.aspx" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
@@ -122,6 +123,13 @@
     </Compile>
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar.aspx.cs">
+      <DependentUpon>Modificar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificar.aspx.designer.cs">
+      <DependentUpon>Modificar.aspx</DependentUpon>
     </Compile>
     <Compile Include="NuevoLugar.aspx.cs">
       <DependentUpon>NuevoLugar.aspx</DependentUpon>

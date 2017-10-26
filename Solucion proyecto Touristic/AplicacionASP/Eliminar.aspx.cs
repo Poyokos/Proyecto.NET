@@ -56,14 +56,23 @@ namespace AplicacionASP
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
             Actividad act = new Actividad();
-            int idSitio = int.Parse(lbResumen.SelectedValue);
-            act.idActividad = idSitio;
 
-            if (act.Delete())
+            try
             {
-                lblInfo.Text = "¡Eliminado!";
-                CargarInformacion();
-            } else { lblInfo.Text = "!No se pudo eliminar¡";  }
+                int idSitio = int.Parse(lbResumen.SelectedValue);
+                act.idActividad = idSitio;
+
+                if (act.Delete())
+                {
+                    lblInfo.Text = "¡Eliminado!";
+                    CargarInformacion();
+                }
+                else { lblInfo.Text = "!No se pudo eliminar¡"; }
+            }
+            catch (Exception)
+            {
+                lblInfo.Text = "¡Debe seleccionar un comentario!";
+            }
         }
     }
 }
