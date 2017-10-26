@@ -64,29 +64,6 @@ namespace Touristic
             }
         }
 
-        public bool Update()
-        {
-            try
-            {
-                DALC.sitio sitio = CommonBC.BaseDeDatos.sitio.First(s => s.idsitio == IdSitio);
-
-                sitio.nombre = Nombre;
-                sitio.direccion = Direccion;
-                sitio.entrada = Entrada;
-                sitio.salida = Salida;
-                sitio.gratuito = EsGratis.ToString();
-                sitio.exposicion_tipo = TipoExposicion.ToString();
-
-                CommonBC.BaseDeDatos.SaveChanges();
-
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
         public Exposicion EnumExposicion(string tipo)
         {
             if (tipo == "Interior")

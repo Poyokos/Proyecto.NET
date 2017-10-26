@@ -25,7 +25,6 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>- Comentarios:</b>&nbsp;
             <asp:Label ID="lblCantComentarios" runat="server"></asp:Label>
             <br />
-            <br />
             <asp:ListView ID="lvResumen" runat="server" OnPagePropertiesChanging="lvResumen_PagePropertiesChanging">
                 <AlternatingItemTemplate>
                     <li style="background-color: #FFFFFF;color: #284775; list-style: none; border-radius: 1em; padding: 1em; border: 1px solid #A9D0F5">- Nombre:
