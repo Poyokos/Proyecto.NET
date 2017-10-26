@@ -69,7 +69,7 @@ namespace AplicacionASP
 
         protected void btnNota_Click(object sender, EventArgs e)
         {
-            Session["_lugarPos"] = ddlLugares.SelectedIndex;
+            Session["_lugarPos"] = ddlLugares.SelectedValue;
             Server.Transfer("Calificacion_Lugar.aspx");
         }
 
@@ -111,7 +111,7 @@ namespace AplicacionASP
         protected void btnAgregarLugar_Click(object sender, EventArgs e)
         {
             Session["_agregar"] = true;
-            Session["_lugarPos"] = ddlLugares.SelectedIndex;
+            Session["_lugarPos"] = ddlLugares.SelectedValue;
             Server.Transfer("NuevoLugar.aspx");
         }
     }
