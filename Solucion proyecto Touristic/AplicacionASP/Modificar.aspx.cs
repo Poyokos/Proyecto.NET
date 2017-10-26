@@ -14,7 +14,10 @@ namespace AplicacionASP
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            CargarLugares();
+            if (!IsPostBack)
+            {
+                CargarLugares();
+            }
         }
 
         private void CargarLugares()
@@ -89,6 +92,7 @@ namespace AplicacionASP
 
             SitioTuristico sitio = new SitioTuristico();
             sitio.IdSitio = idSitio;
+
             #region Datos Obtenidos en controles
             sitio.Nombre = txtNombre.Text;
             sitio.Direccion = txtDireccion.Text;
@@ -125,7 +129,9 @@ namespace AplicacionASP
                 btnEditar.Enabled = true;
 
                 lblInfo.Text = "¡Actualizado correctamente!";
+                CargarLugares();
                 VisibleControles(false);
+
             } else { lblInfo.Text = "¡No pudo ser actualizar!, verifique los campos."; }
         }
 

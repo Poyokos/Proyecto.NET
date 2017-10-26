@@ -10,7 +10,7 @@
       
       <siteMapNode url="NuevoLugar.aspx" title="Lugares" />
 
-      <siteMapNode url="Eliminar.aspx" title="Eliminar"/>
+      <siteMapNode url="Eliminar.aspx" title="Eliminar Comentario"/>
       
       <siteMapNode url="Modificar.aspx" title="Modificar Lugar"/>
 
