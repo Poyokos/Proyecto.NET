@@ -13,13 +13,15 @@
     <form id="form1" runat="server">
         <asp:Panel ID="Panel1" runat="server">
             <h1>Touristic Value</h1>
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+            </asp:SiteMapPath>
+            <br />
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
             <br />
             <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1">
             </asp:Menu>
-            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
             <br />
-            <asp:SiteMapPath ID="SiteMapPath1" runat="server">
-            </asp:SiteMapPath>
+            <br />
         </asp:Panel>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

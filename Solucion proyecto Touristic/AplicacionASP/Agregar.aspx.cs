@@ -30,10 +30,19 @@ namespace AplicacionASP
                 double nota = (double)Session["puntaje"];
                 txtNota.Text = nota.ToString();
             }
+            else
+            {
+                txtNota.Text = "0";
+            }
 
             if (!IsPostBack)
             {
                 this.cargarDdl();
+            }
+
+            if (Session["_lugarPos"] != null)
+            {
+                ddlLugares.SelectedIndex = (int)Session["_lugarPos"];
             }
 
             //if (Session["sitioselect"] == null)
@@ -53,17 +62,14 @@ namespace AplicacionASP
             {
                 item = new ListItem(string.Format("{0}", tempSitio.Nombre));
                 ddlLugares.Items.Add(item);
-            }
+            }           
         }
 
-        protected void btnLugar_Click(object sender, EventArgs e)
-        {
-            Server.Transfer("Lugares.aspx");
-        }
 
 
         protected void btnNota_Click(object sender, EventArgs e)
         {
+            Session["_lugarPos"] = ddlLugares.SelectedValue;
             Server.Transfer("Calificacion_Lugar.aspx");
         }
 
@@ -100,6 +106,13 @@ namespace AplicacionASP
             {
                 lblNotificacion.Text = "¡Ocurrió un error! ¡Vuelva a intentarlo!";
             }
+        }
+
+        protected void btnAgregarLugar_Click(object sender, EventArgs e)
+        {
+            Session["_agregar"] = true;
+            Session["_lugarPos"] = ddlLugares.SelectedValue;
+            Server.Transfer("NuevoLugar.aspx");
         }
     }
 }
