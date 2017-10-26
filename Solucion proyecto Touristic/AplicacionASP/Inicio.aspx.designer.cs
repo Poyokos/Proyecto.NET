@@ -22,6 +22,15 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.Panel Panel2;
         
         /// <summary>
+        /// Control lblLugar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLugar;
+        
+        /// <summary>
         /// Control ddlLugares.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace AplicacionASP {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlLugares;
+        
+        /// <summary>
+        /// Control lblDireccion2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDireccion2;
         
         /// <summary>
         /// Control lblDireccion.
@@ -40,6 +58,15 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.Label lblDireccion;
         
         /// <summary>
+        /// Control lblGratuito.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblGratuito;
+        
+        /// <summary>
         /// Control lblGratis.
         /// </summary>
         /// <remarks>
@@ -49,6 +76,15 @@ namespace AplicacionASP {
         protected global::System.Web.UI.WebControls.Label lblGratis;
         
         /// <summary>
+        /// Control lblPromedio2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPromedio2;
+        
+        /// <summary>
         /// Control lblPromedio.
         /// </summary>
         /// <remarks>
@@ -56,6 +92,15 @@ namespace AplicacionASP {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPromedio;
+        
+        /// <summary>
+        /// Control lblCantComentarios2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCantComentarios2;
         
         /// <summary>
         /// Control lblCantComentarios.

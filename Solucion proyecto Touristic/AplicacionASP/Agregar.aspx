@@ -15,6 +15,7 @@
                 <asp:DropDownList ID="ddlLugares" runat="server">
                 </asp:DropDownList>
                 &nbsp;<asp:RequiredFieldValidator ID="rfvLugar" runat="server" ControlToValidate="ddlLugares" ErrorMessage="Debe ingresar un lugar" ForeColor="Red">*</asp:RequiredFieldValidator>
+                <asp:Button ID="btnAgregarLugar" runat="server" CausesValidation="False" OnClick="btnAgregarLugar_Click" Text="Agregar" />
             </td>
         </tr>
         <tr>

@@ -12,6 +12,7 @@ namespace AplicacionASP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["_agregar"] = false;
             if (!IsPostBack)
             {
                 this.CargarLugares();
