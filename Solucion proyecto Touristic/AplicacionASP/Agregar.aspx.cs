@@ -101,5 +101,11 @@ namespace AplicacionASP
                 lblNotificacion.Text = "¡Ocurrió un error! ¡Vuelva a intentarlo!";
             }
         }
+
+        protected void btnAgregarLugar_Click(object sender, EventArgs e)
+        {
+            Session["_agregar"] = true;
+            Server.Transfer("NuevoLugar.aspx");
+        }
     }
 }
