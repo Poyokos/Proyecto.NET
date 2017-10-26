@@ -15,7 +15,6 @@ namespace AplicacionASP
         {
             if (!IsPostBack)
             {
-                ddlExposicion.Items.Clear();
                 ddlExposicion.DataSource = Enum.GetValues(typeof(Exposicion));
                 ddlExposicion.DataBind();
             }

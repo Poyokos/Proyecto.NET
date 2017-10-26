@@ -8,21 +8,21 @@
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <asp:Panel ID="Panel2" runat="server" CssClass="auto-style1" Height="624px">
+        <asp:Panel ID="Panel2" runat="server" CssClass="auto-style1" Height="624px" BackColor="White" Font-Names="Imprint MT Shadow">
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Lugar:&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>- Lugar:</b>&nbsp;&nbsp;
             <asp:DropDownList ID="ddlLugares" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlLugares_SelectedIndexChanged">
             </asp:DropDownList>
-            &nbsp;&nbsp; - Dirección:
+            &nbsp;&nbsp; <b>- Dirección:</b>
             <asp:Label ID="lblDireccion" runat="server"></asp:Label>
-            &nbsp;&nbsp; - Gratuito:&nbsp;&nbsp;
+            &nbsp;&nbsp; <b>- Gratuito:</b>&nbsp;&nbsp;
             <asp:Label ID="lblGratis" runat="server"></asp:Label>
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Promedio:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>- Promedio:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblPromedio" runat="server"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Comentarios:&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>- Comentarios:</b>&nbsp;
             <asp:Label ID="lblCantComentarios" runat="server"></asp:Label>
             <br />
             <asp:ListView ID="lvResumen" runat="server">
@@ -30,21 +30,21 @@
                     <li style="background-color: #FFFFFF;color: #284775; list-style: none; border-radius: 1em; padding: 1em; border: 1px solid #A9D0F5">- Nombre:
                         <asp:Label ID="NombreTuristaLabel" runat="server" Text='<%# Eval("NombreTurista") %>' />
                         <br />
-                        - Observacion:
+                        - Observación:
                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("Observacion") %>' />
                         <br />
                         - Nota:
                         <asp:Label ID="NotaLabel" runat="server" Text='<%# Eval("Nota") %>' />
                         <br />
-                        - Fecha Publicación:
-                        <asp:Label ID="FechaDeCriticaLabel" runat="server" Text='<%# Eval("FechaDeCritica") %>' />
+                        - Publicación:
+                        <asp:Label ID="PublicacionLabel" runat="server" Text='<%# Eval("Publicacion") %>' />
                         <br />
                     </li>
                 </AlternatingItemTemplate>
                 <EmptyDataTemplate>
                     <br>
                     <br>
-                    <center><h2>No se han devuelto datos</h2> </center>
+                    <center><h2>¡Aún no hay comentarios!</h2> </center>
                 </EmptyDataTemplate>
                 <ItemSeparatorTemplate>
                     <br />
@@ -53,14 +53,14 @@
                     <li style="background-color: #A9D0F5;color: #333333; list-style: none; border-radius: 1em; padding: 1em;">- Nombre:
                         <asp:Label ID="NombreTuristaLabel" runat="server" Text='<%# Eval("NombreTurista") %>' />
                         <br />
-                        - Observacion:
+                        - Observación:
                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("Observacion") %>' />
                         <br />
                         - Nota:
                         <asp:Label ID="NotaLabel" runat="server" Text='<%# Eval("Nota") %>' />
                         <br />
-                        - Fecha Publicación:
-                        <asp:Label ID="FechaDeCriticaLabel" runat="server" Text='<%# Eval("FechaDeCritica") %>' />
+                        - Publicación:
+                        <asp:Label ID="PublicacionLabel" runat="server" Text='<%# Eval("Publicacion") %>' />
                         <br />
                     </li>
                 </ItemTemplate>
@@ -83,14 +83,14 @@
                         - Nombre:
                         <asp:Label ID="NombreTuristaLabel" runat="server" Text='<%# Eval("NombreTurista") %>' />
                         <br />
-                        - Observacion:
+                        - Observación:
                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("Observacion") %>' />
                         <br />
                         - Nota:
                         <asp:Label ID="NotaLabel" runat="server" Text='<%# Eval("Nota") %>' />
                         <br />
-                        - Fecha Publicación:
-                        <asp:Label ID="FechaDeCriticaLabel" runat="server" Text='<%# Eval("FechaDeCritica") %>' />
+                        - Publicación:
+                        <asp:Label ID="PublicacionLabel" runat="server" Text='<%# Eval("Publicacion") %>' />
                         <br />
                     </li>
                 </SelectedItemTemplate>

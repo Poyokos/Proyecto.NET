@@ -33,8 +33,6 @@ namespace AplicacionASP
         //Cambiar comentarios según item seleccionado
         protected void ddlLugares_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //lvResumen.Items.Clear();
-
             CargarInformacion();
         }
 
@@ -55,7 +53,9 @@ namespace AplicacionASP
             lvResumen.DataSource = lista.ListaPorLugar(idSitio);
             lvResumen.DataBind();
             //Muestra el Promedio de notas de las Actividades segun Sitio
-            lblPromedio.Text = string.Format("{0}", lista.Promedio);
+            double prm = Math.Round(lista.Promedio, 1);
+            lblPromedio.Text = prm.ToString();
+            //lblPromedio.Text = string.Format("{0}", lista.Promedio);
             //Muestra cantidad Total de Comentarios segung Sitio
             lblCantComentarios.Text = lvResumen.Items.Count.ToString();
         }
