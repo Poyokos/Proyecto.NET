@@ -60,5 +60,22 @@ namespace Touristic
                 return false;
             }
         }
+
+        public bool Delete()
+        {
+            try
+            {
+                DALC.actividad act = CommonBC.BaseDeDatos.actividad.First(a => a.idactividad == idActividad);
+
+                CommonBC.BaseDeDatos.actividad.Remove(act);
+                CommonBC.BaseDeDatos.SaveChanges();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

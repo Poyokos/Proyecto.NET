@@ -15,10 +15,11 @@ namespace AplicacionASP
             if (!IsPostBack)
             {
                 this.CargarLugares();
-                CargarInformacion();
+                this.CargarInformacion();
             }
 
         }
+
         private void CargarLugares()
         {
             SitioCollection lista = new SitioCollection();
@@ -29,6 +30,7 @@ namespace AplicacionASP
             ddlLugares.DataBind();
             ddlLugares.SelectedIndex = 0;
         }
+
         private void CargarInformacion()
         {
             ActividadCollection lista = new ActividadCollection();
@@ -37,16 +39,31 @@ namespace AplicacionASP
 
             SitioTuristico sitio = new SitioTuristico();
             sitio.IdSitio = idSitio;
-            
+
             //Carga el List View Resumen con todas las Actividades segun Sitio
-            lvResumen.DataSource = lista.ListaPorLugar(idSitio);
-            lvResumen.DataBind();
+            lbResumen.DataTextField = "Observacion";
+            lbResumen.DataValueField = "idActividad";
+            lbResumen.DataSource = lista.ListaPorLugar(idSitio);
+            lbResumen.DataBind();
            
         }
 
         protected void ddlLugares_SelectedIndexChanged(object sender, EventArgs e)
         {
             CargarInformacion();
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Actividad act = new Actividad();
+            int idSitio = int.Parse(lbResumen.SelectedValue);
+            act.idActividad = idSitio;
+
+            if (act.Delete())
+            {
+                lblInfo.Text = "¡Eliminado!";
+                CargarInformacion();
+            } else { lblInfo.Text = "!No se pudo eliminar¡";  }
         }
     }
 }
