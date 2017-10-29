@@ -9,8 +9,11 @@
     <siteMapNode title="Administración">
       
       <siteMapNode url="NuevoLugar.aspx" title="Lugares" />
-    
+
+      <siteMapNode url="Eliminar.aspx" title="Eliminar"/>
+
     </siteMapNode>
+    
   
   </siteMapNode>
 </siteMap>

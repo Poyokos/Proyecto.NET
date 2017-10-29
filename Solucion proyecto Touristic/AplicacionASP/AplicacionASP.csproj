@@ -71,6 +71,7 @@
     <None Include="packages.config" />
     <Content Include="Agregar.aspx" />
     <Content Include="Calificacion_Lugar.aspx" />
+    <Content Include="Eliminar.aspx" />
     <Content Include="IngresoTurista.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="NuevoLugar.aspx" />
@@ -100,6 +101,13 @@
     </Compile>
     <Compile Include="Calificacion_Lugar.aspx.designer.cs">
       <DependentUpon>Calificacion_Lugar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar.aspx.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Eliminar.aspx.designer.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
     </Compile>
     <Compile Include="IngresoTurista.aspx.cs">
       <DependentUpon>IngresoTurista.aspx</DependentUpon>
